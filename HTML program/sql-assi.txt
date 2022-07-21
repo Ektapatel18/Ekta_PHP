@@ -1,0 +1,27 @@
+sql assig
+
+a -> select First_Name as Employee_Name from employee;
+
+b ->SELECT First_name , extract(year FROM Joining_Date)AS year ,
+     extract(month FROM Joining_Date)AS month ,Joining_Date from employee;
+
+c ->SELECT First_Name , Salary from employee ORDER by First_Name ASC,Salary DESC;
+
+d ->SELECT First_Name FROM employee WHERE First_Name LIKE '%o%';
+
+e ->
+
+f ->SELECT Department ,SUM(Salary) Total_salary from employee GROUP BY Department ORDER BY Total_salary DESC;
+
+g ->SELECT Department ,max(Salary) FROM employee GROUP BY Department ORDER BY Salary ASC;
+
+h ->SELECT First_Name , incentive_amount FROM employee A INNER JOIN incentives B on A.Em_id=B.incentives_id AND incentive_amount>3000;
+
+i ->
+
+j ->SELECT employee.First_Name , incentives.incentive_amount FROM employee LEFT JOIN incentives on employee.Em_id=incentives.Em_id;
+
+k ->CREATE VIEW employee1 AS SELECT First_Name , Last_Name ,Salary FROM employee;
+	SELECT * FROM employee1;
+
+l ->
