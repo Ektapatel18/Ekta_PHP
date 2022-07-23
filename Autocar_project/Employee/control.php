@@ -15,29 +15,14 @@ class control
 			case '/dashboard';
 			include_once('dashboard.php');
 			break;
-			case '/add_client';
-			include_once('add_client.php');
-			break;
-			case '/add_emp';
-			include_once('add_emp.php');
-			break;
 			case '/manage_booking';
 			include_once('manage_booking.php');
 			break;
 			case '/manage_categories';
 			include_once('manage_categories.php');
 			break;
-			case '/manage_client';
-			include_once('manage_client.php');
-			break;
 			case '/manage_contact';
 			include_once('manage_contact.php');
-			break;
-			case '/manage_employee';
-			include_once('manage_employee.php');
-			break;
-			case '/manage_feedback';
-			include_once('manage_feedback.php');
 			break;
 			case '/manage_payment';
 			include_once('manage_payment.php');
@@ -48,8 +33,8 @@ class control
 			case '/manage_vehicale';
 			include_once('manage_vehicale.php');
 			break;
-			case '/manage_profile';
-			include_once('manage_profile.php');
+			case '/profile';
+			include_once('profile.php');
 			break;
 			
 			default:
