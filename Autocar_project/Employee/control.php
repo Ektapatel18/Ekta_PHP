@@ -21,6 +21,9 @@ class control
 			case '/manage_categories';
 			include_once('manage_categories.php');
 			break;
+			case '/add_categories';
+			include_once('add_categories.php');
+			break;
 			case '/manage_contact';
 			include_once('manage_contact.php');
 			break;

@@ -17,52 +17,46 @@ include_once('header.php');
  		<div class="validation-form">
  	<!---->
   	    
-        <form>
+        <form action="" method="post" enctype="multipart/form-data">
          	<div class="vali-form">
             <div class="col-md-12 form-group1">
               <label class="control-label">Firstname</label>
-              <input type="text" placeholder="Firstname" required="">
+              <input type="text" name="name" placeholder="Firstname" required="">
             </div>
             <div class="clearfix"> </div>
             </div>
 			
 			 <div class="col-md-12 form-group1">
               <label class="control-label">Address</label>
-			  <textarea class="form-control" placeholder="Address" required=""></textarea>
+			  <textarea class="form-control" name="address" placeholder="Address" required=""></textarea>
             </div>
             <div class="clearfix"> </div>
 			
 			<div class="col-md-12 form-group1">
 			<label class="control-label">Contact Number</label>
-			<input type="text" placeholder="contact no" required="">
+			<input type="text" name="contact_no" placeholder="contact no" required="">
 			</div>
 			 <div class="clearfix"> </div>
 			
 			<div class="col-md-12 form-group1 group-mail">
               <label class="control-label">Email</label>
-              <input type="text" placeholder="Email" required="">
+              <input type="email" name="email_id" placeholder="Email" required="">
             </div>
             
 			<div class="clearfix"> </div>
 		
 			<div class="col-md-12 form-group1">
               <label class="control-label">User Name</label>
-              <input type="text" placeholder="User Name" required="">
+              <input type="text" name="user_name" placeholder="User Name" required="">
             </div>
 			
 			<div class="clearfix"> </div>
 			
-			<div class="vali-form">
-			<div class="col-md-6 form-group1">
+			<div class="col-md-12 form-group1">
               <label class="control-label">Create a password</label>
-              <input type="password" placeholder="Create a password" required="">
+              <input type="password" name="pass" placeholder="Create a password" required="">
             </div>
 			
-			<div class="col-md-6 form-group1">
-			 <label class="control-label">Repeated a password</label>
-              <input type="password" placeholder="Repeated a password" required="">
-            </div>
-			</div>
              <div class="clearfix"> </div>
             
 			<div class="vali-form">
