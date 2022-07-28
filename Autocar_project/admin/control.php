@@ -26,7 +26,28 @@ class control extends model
 			break;
 			
 			case '/add_emp';
-			
+			if(isset($_REQUEST['submit']))
+			{
+				$name=$_REQUEST['name'];
+				$addres=$_REQUEST['addres'];
+				$contact_no=$_REQUEST['contact_no'];
+				$email_id=$_REQUEST['email_id'];
+				$user_name=$_REQUEST['user_name'];
+				$password=$_REQUEST['pass'];
+				$pass=md5($password);
+				
+		 		$arr=array("name"=>$name,"addres"=>$addres,"contact_no"=>$contact,"email_id"=>$email_id,"user_name"=>$user_name,"pass"=>$pass);
+				
+				$res=$this->insert('employee',$arr);
+				if($res)
+				{
+					echo "<script> alert('Register successfully')</script>";
+				}
+				else
+				{
+					echo "<script>Not successfully</script>";
+				}
+			}
 			include_once('add_emp.php');
 			break;
 			

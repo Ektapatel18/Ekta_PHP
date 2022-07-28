@@ -7,7 +7,7 @@ include_once('header.php');
 		    	<h2>
 				<a href="dashboard">Home</a>
 				<i class="fa fa-angle-right"></i>
-				<span>Validation</span>
+				<span>Add Employee</span>
 				</h2>
 		    </div>
 		<!--//banner-->
@@ -40,7 +40,7 @@ include_once('header.php');
 			
 			<div class="col-md-12 form-group1 group-mail">
               <label class="control-label">Email</label>
-              <input type="email" name="email_id" placeholder="Email" required="">
+              <input type="text" name="email_id" placeholder="Email" required="">
             </div>
             
 			<div class="clearfix"> </div>
@@ -63,7 +63,7 @@ include_once('header.php');
              <div class="clearfix"> </div>
 
             <div class="col-md-12 form-group">
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" name="submit" class="btn btn-primary">Submit</button>
               <button type="reset" class="btn btn-default">Reset</button>
             </div>
           <div class="clearfix"> </div>

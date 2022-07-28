@@ -9,13 +9,13 @@ class model
 	}
 	function insert($tbl,$arr)
 	{
-		$key_arr=arr_keys($arr);
+		$key_arr=array_keys($arr);
 		$key=implode(",",$key_arr);
 		
-		$value_arr=arr_values($arr);
+		$value_arr=array_values($arr);
 		$value=implode("','",$value_arr);
 		
-		$ins="insert into $tbl($key) values('$value')";
+		echo $ins="insert into $tbl($key) values('$value')";
 		$run=$this->conn->query($ins);
 		return $run;
 	}
