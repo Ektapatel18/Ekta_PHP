@@ -36,7 +36,7 @@ class control extends model
 				$password=$_REQUEST['pass'];
 				$pass=md5($password);
 				
-		 		$arr=array("name"=>$name,"addres"=>$addres,"contact_no"=>$contact,"email_id"=>$email_id,"user_name"=>$user_name,"pass"=>$pass);
+		 		$arr=array("name"=>$name,"addres"=>$addres,"contact_no"=>$contact_no,"email_id"=>$email_id,"user_name"=>$user_name,"pass"=>$pass);
 				
 				$res=$this->insert('employee',$arr);
 				if($res)
@@ -68,6 +68,7 @@ class control extends model
 			break;
 			
 			case '/manage_employee';
+			$manage_employee_arr=$this->selectall('employee');
 			include_once('manage_employee.php');
 			break;
 			

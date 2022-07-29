@@ -28,7 +28,7 @@ include_once('header.php');
 			
 			 <div class="col-md-12 form-group1">
               <label class="control-label">Address</label>
-			  <textarea class="form-control" name="address" placeholder="Address" required=""></textarea>
+			  <textarea class="form-control" name="addres" placeholder="Address" required=""></textarea>
             </div>
             <div class="clearfix"> </div>
 			

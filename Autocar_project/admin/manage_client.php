@@ -14,12 +14,11 @@ include_once('header.php');
  	 <!--faq-->
  	<div class="blank">
 	
-
-			<div class="blank-page">
-				
-				<div class="table-responsive container mt-3">
+			<div class="blank-page" style="overflow:auto">
+				<div class="container mt-3">			
 				  <h2>Manage Client</h2>
 				
+				<div>
 				  <table class="table">
 					<thead>
 					  <tr>
@@ -52,24 +51,11 @@ include_once('header.php');
 						<td><a href="#" class="btn btn-primary">Edit</a></td>
 						<td><a href="#" class="btn btn-danger">Delete</a></td>
 					  </tr>
-					  <tr>
-					    <td>2</td>
-						<td>Ekta</td>
-						<td>vastrapur</td>
-						<td>8907654321</td>
-						<td>epatel@gmail.com</td>
-						<td>epatel</td>
-						<td>6567554453</td>
-						<td>8907654321</td>
-						<td>8907654321</td>
-						<td>8907654321</td>
-						<td><a href="#" class="btn btn-primary">Edit</a></td>
-						<td><a href="#" class="btn btn-danger">Delete</a></td>
-					  </tr>
+					  
 					</tbody>
 				  </table>
 				</div>
-				
+				</div>
 	        </div>
 	</div>
 	

@@ -15,7 +15,7 @@ include_once('header.php');
  	<div class="blank">
 	
 
-			<div class="blank-page">
+			<div class="blank-page" style="overflow:auto">
 				
 				<div class="table-responsive container mt-3">
 				  <h2>Manage Employee</h2>
@@ -34,36 +34,24 @@ include_once('header.php');
 					  </tr>
 					</thead>
 					<tbody>
+					<?php
+					foreach($manage_employee_arr as $c)
+					{
+					?>
 					  <tr>
-						<td>1</td>
-						<td>Ekta</td>
-						<td>maninagar</td>
-						<td>8908776</td>
-						<td>epatel@gmail.com</td>
-						<td>epatel</td>
+						<td><?php echo $c->emp_id;?></td>
+						<td><?php echo $c->name;?></td>
+						<td><?php echo $c->addres;?></td>
+						<td><?php echo $c->contact_no;?></td>
+						<td><?php echo $c->email_id;?></td>
+						<td><?php echo $c->user_name;?></td>
 						<td><a href="#" class="btn btn-primary">Edit</a></td>
 						<td><a href="#" class="btn btn-danger">Delete</a></td>
 					  </tr>
-					  <tr>
-						<td>2</td>
-						<td>Binita</td>
-						<td>vastral</td>
-						<td>9078654321</td>
-						<td>binipatel@gmail.com</td>
-						<td>binipatel</td>
-						<td><a href="#" class="btn btn-primary">Edit</a></td>
-						<td><a href="#" class="btn btn-danger">Delete</a></td>
-					  </tr>
-					   <tr>
-						<td>3</td>
-						<td>Binita</td>
-						<td>vastral</td>
-						<td>9078654321</td>
-						<td>binipatel@gmail.com</td>
-						<td>binipatel</td>
-						<td><a href="#" class="btn btn-primary">Edit</a></td>
-						<td><a href="#" class="btn btn-danger">Delete</a></td>
-					  </tr>
+					<?php
+					}
+					?>
+					
 					</tbody>
 				  </table>
 				</div>
