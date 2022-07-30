@@ -212,7 +212,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					 <li>
                         <a href="manage_user" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage User</span> </a>
                     </li>
-					 <li>
+					<li>
+						<a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Categories</span><span class="fa arrow"></span></a>
+						<ul class="nav nav-second-level">
+                            <li><a href="add_categories" class=" hvr-bounce-to-right"> <i class="fa fa-user nav_icon"></i>Add Categories</a></li>
+                            
+                            <li><a href="manage_categories" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Categories</a></li>		
+					   </ul>
+					</li>
+					<li>
                         <a href="manage_contact" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage Contact</span> </a>
                     </li>
                     <li>
@@ -224,14 +232,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<li>
                         <a href="manage_vehicale" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage Vehicales</span> </a>
                     </li>
-					<li>
-						<a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Categories</span><span class="fa arrow"></span></a>
-						<ul class="nav nav-second-level">
-                            <li><a href="add_categories" class=" hvr-bounce-to-right"> <i class="fa fa-user nav_icon"></i>Add Categories</a></li>
-                            
-                            <li><a href="manage_categories" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Categories</a></li>		
-					   </ul>
-					</li>
+					
 					
                 </ul>
             </div>

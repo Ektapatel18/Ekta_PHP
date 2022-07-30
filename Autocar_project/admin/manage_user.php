@@ -15,7 +15,7 @@ include_once('header.php');
  	<div class="blank">
 	
 
-			<div class="blank-page">
+			<div class="blank-page" style="overflow:auto">
 				
 				<div class="container mt-3">
 				  <h2>Manage User</h2>
@@ -29,31 +29,32 @@ include_once('header.php');
 						<th>Contact_no</th>
 						<th>Email_id</th>
 						<th>User_name</th>
+						<th>adharcard_no</th>
+						<th>driving_licence</th>
 						<th>Edit</th>
 						<th>Delete</th>
 					  </tr>
 					</thead>
 					<tbody>
+					<?php
+						foreach ($manage_user_arr as $c)
+						{
+							?>
 					  <tr>
-						<td>1</td>
-						<td>Ekta</td>
-						<td>maninagar</td>
-						<td>8908776</td>
-						<td>epatel@gmail.com</td>
-						<td>epatel</td>
+						<td><?php echo $c->cust_id;?></td>
+						<td><?php echo $c->name;?></td>
+						<td><?php echo $c->addres;?></td>
+						<td><?php echo $c->contact_no;?></td>
+						<td><?php echo $c->email_id;?></td>
+						<td><?php echo $c->user_name;?></td>
+						<td><?php echo $c->adharcard_no;?></td>
+						<td><?php echo $c->driving_licence;?></td>
 						<td><a href="#" class="btn btn-primary">Edit</a></td>
 						<td><a href="#" class="btn btn-danger">Delete</a></td>
 					  </tr>
-					  <tr>
-						<td>2</td>
-						<td>Tushar</td>
-						<td>maninagar</td>
-						<td>8908776</td>
-						<td>tushar@gmail.com</td>
-						<td>tushar</td>
-						<td><a href="#" class="btn btn-primary">Edit</a></td>
-						<td><a href="#" class="btn btn-danger">Delete</a></td>
-					  </tr>
+					  <?php
+						}
+						?>
 					</tbody>
 				  </table>
 				</div>

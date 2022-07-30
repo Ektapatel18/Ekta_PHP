@@ -7,7 +7,7 @@ include_once('header.php');
 		    	<h2>
 				<a href="dashboard">Home</a>
 				<i class="fa fa-angle-right"></i>
-				<span>Validation</span>
+				<span>Add Client</span>
 				</h2>
 		    </div>
 		<!--//banner-->
@@ -17,45 +17,40 @@ include_once('header.php');
  		<div class="validation-form">
  	<!---->
   	    
-        <form>
+        <form action="" method="post" enctype="multipart/form-data">
          	<div class="vali-form">
             <div class="col-md-12 form-group1">
               <label class="control-label">Firstname</label>
-              <input type="text" placeholder="Firstname" required="">
+              <input type="text" name="name" placeholder="Firstname" required="">
             </div>
             <div class="clearfix"> </div>
             </div>
             
 			<div class="col-md-12 form-group1">
               <label class="control-label">Address</label>
-              <textarea class="form-control" placeholder="Address" required=""></textarea>
+              <textarea class="form-control" name="addres" placeholder="Address" required=""></textarea>
             </div>
 			
 			<div class="col-md-12 form-group1 form-last">
-              <label class="control-label">Mobile Number</label>
-              <input type="text" placeholder="Mobile Number" required="">
+              <label class="control-label">Contact No</label>
+              <input type="text" name="contact_no" placeholder="Mobile Number" required="">
             </div>
 			<div class="clearfix"> </div>
 			
             <div class="col-md-12 form-group1 group-mail">
               <label class="control-label">Email ID</label>
-              <input type="text" placeholder="Email ID" required="">
+              <input type="text" name="email_id" placeholder="Email ID" required="">
             </div>
              <div class="clearfix"> </div>
+			 
             <div class="col-md-12 form-group1 group-mail">
               <label class="control-label">User Name</label>
-              <input type="text" placeholder="User Name" required="">
+              <input type="text" name="user_name" placeholder="User Name" required="">
             </div>
-			 <div class="vali-form vali-form1">
-            <div class="col-md-6 form-group1">
+			
+            <div class="col-md-12 form-group1">
               <label class="control-label">Create a password</label>
-              <input type="password" placeholder="Create a password" required="">
-            </div>
-            <div class="col-md-6 form-group1 form-last">
-              <label class="control-label">Repeated password</label>
-              <input type="password" placeholder="Repeated password" required="">
-            </div>
-            <div class="clearfix"> </div>
+              <input type="password" name="pass" placeholder="Create a password" required="">
             </div>
              
              <div class="clearfix"> </div>
@@ -63,33 +58,33 @@ include_once('header.php');
              
              <div class="col-md-12 form-group1 group-mail">
               <label class="control-label">Adharcard No</label>
-              <input type="text" placeholder="Adharcard No" required="">
+              <input type="text" name="Adharcard_no" placeholder="Adharcard No" required="">
             </div>
 			
              <div class="clearfix"> </div>
            
             <div class="col-md-12 form-group1 group-mail">
               <label class="control-label ">Driving Licence</label>
-              <input type="text" placeholder="Driving Licence" required="">
+              <input type="text" name="driving_licence" placeholder="Driving Licence" required="">
             </div>
 			
 			<div class="clearfix"> </div>
             <div class="col-md-12 form-group1 group-mail">
               <label class="control-label ">PUC</label>
-              <input type="text" placeholder="PUC" required="">
+              <input type="text" name="PUC" placeholder="PUC" required="">
             </div>
 			
 			<div class="clearfix"> </div>
            
             <div class="col-md-12 form-group1 group-mail">
               <label class="control-label ">Insurance Policy</label>
-              <input type="text" placeholder="Insurance Policy" required="">
+              <input type="text" name="Insurance_policy" placeholder="Insurance Policy" required="">
             </div>
 			
 			
             <div class="col-md-12 form-group">
-              <button type="submit" class="btn btn-primary">Submit</button>
-              <button type="reset" class="btn btn-default">Reset</button>
+              <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+              <button type="reset" name="reset" class="btn btn-default">Reset</button>
             </div>
           <div class="clearfix"> </div>
         </form>

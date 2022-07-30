@@ -15,7 +15,7 @@ include_once('header.php');
  	<div class="blank">
 	
 
-			<div class="blank-page">
+			<div class="blank-page" style="overflow:auto">
 				
 				<div class="container mt-3">
 				  <h2>Manage Categories</h2>
@@ -32,22 +32,21 @@ include_once('header.php');
 					  </tr>
 					</thead>
 					<tbody>
+					<?php
+						foreach($manage_categories_arr as $c)
+						{
+					?>
 					  <tr>
-						<td>1</td>
-						<td>Bike</td>
-						<td>Here is basic description</td>
-						<td>bike.png</td>
+						<td><?php echo $c->cat_id;?></td>
+						<td><?php echo $c->cate_name;?></td>
+						<td><?php echo $c->cate_desc;?></td>
+						<td><?php echo $c->cate_img;?></td>
 						<td><a href="#" class="btn btn-primary">Edit</a></td>
 						<td><a href="#" class="btn btn-danger">Delete</a></td>
 					  </tr>
-						<tr>
-						<td>2</td>
-						<td>Activa</td>
-						<td>Here is basic description</td>
-						<td>activa.png</td>
-						<td><a href="#" class="btn btn-primary">Edit</a></td>
-						<td><a href="#" class="btn btn-danger">Delete</a></td>
-					  </tr>
+						<?php
+						}
+						?>
 
 					</tbody>
 				  </table>

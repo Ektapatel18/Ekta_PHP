@@ -15,7 +15,7 @@ include_once('header.php');
  	<div class="blank">
 	
 
-			<div class="blank-page">
+			<div class="blank-page" style="overflow:auto">
 				
 				<div class="container mt-3">
 				  <h2>Manage Payment</h2>
@@ -32,22 +32,21 @@ include_once('header.php');
 					  </tr>
 					</thead>
 					<tbody>
+					<?php
+						foreach($manage_payment_arr as $p)
+						{
+					?>
 					  <tr>
-						<td>1</td>
-						<td>2</td>
-						<td>1</td>
-						<td>Cash</td>
+						<td><?php echo $p->Pay_id;?></td>
+						<td><?php echo $p->cust_id;?></td>
+						<td><?php echo $p->book_id;?></td>
+						<td><?php echo $p->pay_type;?></td>
 						<td><a href="#" class="btn btn-primary">Edit</a></td>
 						<td><a href="#" class="btn btn-danger">Delete</a></td>
 					  </tr>
-					  <tr>
-						<td>2</td>
-						<td>1</td>
-						<td>2</td>
-						<td>Card</td>
-						<td><a href="#" class="btn btn-primary">Edit</a></td>
-						<td><a href="#" class="btn btn-danger">Delete</a></td>
-					  </tr>
+					  <?php
+					  }
+					  ?>
 					</tbody>
 				  </table>
 				</div>

@@ -37,21 +37,27 @@ include_once('header.php');
 					  </tr>
 					</thead>
 					<tbody>
+					<?php
+					     foreach($manage_client_arr as $c)
+						{
+					?>
 					  <tr>
-						<td>1</td>
-						<td>Ekta</td>
-						<td>vastrapur</td>
-						<td>8907654321</td>
-						<td>epatel@gmail.com</td>
-						<td>epatel</td>
-						<td>6567554453</td>
-						<td>8907654321</td>
-						<td>8907654321</td>
-						<td>8907654321</td>
+						<td><?php echo $c->cli_id;?></td>
+						<td><?php echo $c->name;?></td>
+						<td><?php echo $c->addres;?></td>
+						<td><?php echo $c->contact_no;?></td>
+						<td><?php echo $c->email_id;?></td>
+						<td><?php echo $c->user_name;?></td>
+						<td><?php echo $c->Adharcard_no;?></td>
+						<td><?php echo $c->driving_licence;?></td>
+						<td><?php echo $c->PUC;?></td>
+						<td><?php echo $c->Insurance_policy;?></td>
 						<td><a href="#" class="btn btn-primary">Edit</a></td>
 						<td><a href="#" class="btn btn-danger">Delete</a></td>
 					  </tr>
-					  
+					 <?php
+					}
+					?>
 					</tbody>
 				  </table>
 				</div>
