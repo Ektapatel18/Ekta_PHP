@@ -15,7 +15,7 @@ include_once('header.php');
  	<div class="blank">
 	
 
-			<div class="blank-page">
+			<div class="blank-page" style="overflow:auto">
 				
 				<div class="container mt-3">
 				  <h2>Manage Vehicale</h2>
@@ -34,26 +34,23 @@ include_once('header.php');
 					  </tr>
 					</thead>
 					<tbody>
+					<?php
+						foreach($manage_vehicale_arr as $v)
+						{
+					?>
 					  <tr>
-						<td>1</td>
-						<td>2</td>
-						<td>Bajaj</td>
-						<td>Bajaj Auto</td>
-						<td>60000</td>
-						<td>bike.png</td>
+						<td><?php echo $v->vehi_id;?></td>
+						<td><?php echo $v->cli_id;?></td>
+						<td><?php echo $v->name;?></td>
+						<td><?php echo $v->des;?></td>
+						<td><?php echo $v->price;?></td>
+						<td><img src="img/<?php echo $v->img;?>" width="80px" height="80px"/></td>
 						<td><a href="#" class="btn btn-primary">Edit</a></td>
 						<td><a href="#" class="btn btn-danger">Delete</a></td>
 					  </tr>
-					  <tr>
-						<td>2</td>
-						<td>1</td>
-						<td>TVS</td>
-						<td>TVS motor company</td>
-						<td>60000</td>
-						<td>bike.png</td>
-						<td><a href="#" class="btn btn-primary">Edit</a></td>
-						<td><a href="#" class="btn btn-danger">Delete</a></td>
-					  </tr>
+					 <?php
+					 }
+					 ?>
 					</tbody>
 				  </table>
 				</div>

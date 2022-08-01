@@ -15,7 +15,7 @@ include_once('header.php');
  	<div class="blank">
 	
 
-			<div class="blank-page">
+			<div class="blank-page" style="overflow:auto">
 				
 				<div class="container mt-3">
 				  <h2>Manage Booking</h2>
@@ -33,24 +33,23 @@ include_once('header.php');
 					  </tr>
 					</thead>
 					<tbody>
+					<?php 
+						foreach($manage_booking_arr as $b)
+						{
+					
+					?>
 					  <tr>
-						<td>1</td>
-						<td>2</td>
-						<td>2</td>
-						<td>3/7/2022</td>
-						<td>10:30</td>
+						<td><?php echo $b->book_id;?></td>
+						<td><?php echo $b->cust_id;?></td>
+						<td><?php echo $b->Vehi_id;?></td>
+						<td><?php echo $b->book_date;?></td>
+						<td><?php echo $b->booking_time;?></td>
 						<td><a href="#" class="btn btn-primary">Edit</a></td>
 						<td><a href="#" class="btn btn-danger">Delete</a></td>
 					  </tr>
-					  <tr>
-						<td>2</td>
-						<td>1</td>
-						<td>2</td>
-						<td>6/7/2022</td>
-						<td>12:30</td>
-						<td><a href="#" class="btn btn-primary">Edit</a></td>
-						<td><a href="#" class="btn btn-danger">Delete</a></td>
-					  </tr>
+					 <?php
+					 }
+					 ?>
 					</tbody>
 				  </table>
 				</div>

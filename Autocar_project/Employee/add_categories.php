@@ -17,7 +17,7 @@ include_once('header.php');
  		<div class="validation-form">
  	<!---->
   	    
-        <form>
+        <form action="" method="post" enctype="multipart/form-data">
          	<div class="vali-form">
             <div class="col-md-12 form-group1">
               <label class="control-label">Categories Name</label>

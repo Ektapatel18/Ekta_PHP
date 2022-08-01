@@ -18,10 +18,12 @@ class control extends model
 			include_once('dashboard.php');
 			break;
 			case '/manage_booking';
+			$manage_booking_arr=$this->selectall('booking');
 			include_once('manage_booking.php');
 			break;
 			
 			case '/manage_categories';
+			$manage_categories_arr=$this->selectall('categories');
 			include_once('manage_categories.php');
 			break;
 			
@@ -30,14 +32,14 @@ class control extends model
 			{
 				$cate_name=$_REQUEST['cate_name'];
 				$cate_desc=$_REQUEST['cate_desc'];
-				$cate_img=$_FILES['file']['name'];
+				$cate_img=$_FILES['cate_img']['name'];
 				$path='img/'.$cate_img;
-				$dup_file=$FILES['file']['tmp_name'];
+				$dup_file=$_FILES['cate_img']['tmp_name'];
 				move_uploaded_file($dup_file,$path);
 				
 		 		$arr=array("cate_name"=>$cate_name,"cate_desc"=>$cate_desc,"cate_img"=>$cate_img);
 				
-				$res=$this->insert('employee',$arr);
+				$res=$this->insert('categories',$arr);
 				if($res)
 				{
 					echo "<script> alert('Register successfully')</script>";
@@ -49,10 +51,14 @@ class control extends model
 			}
 			include_once('add_categories.php');
 			break;
+			
 			case '/manage_contact';
+			$manage_contact_arr=$this->selectall('contact');
 			include_once('manage_contact.php');
 			break;
+			
 			case '/manage_payment';
+			$manage_payment_arr=$this->selectall('payment');
 			include_once('manage_payment.php');
 			break;
 			case '/manage_user';
@@ -60,6 +66,7 @@ class control extends model
 			include_once('manage_user.php');
 			break;
 			case '/manage_vehicale';
+			$manage_vehicale_arr=$this->selectall('vehicale');
 			include_once('manage_vehicale.php');
 			break;
 			case '/profile';
