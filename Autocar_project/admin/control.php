@@ -6,7 +6,7 @@ class control extends model
 {
 	function __construct()
 	{
-		
+		session_start();
 		model::__construct();
 		
 		$path=$_SERVER['PATH_INFO'];
@@ -14,6 +14,29 @@ class control extends model
 		switch($path)
 		{
 			case '/index';
+			if(isset($_REQUEST['submit']))
+			{
+				$username=$_REQUEST['username'];
+				$password=$_REQUEST['pass'];
+				$pass=md5($password);
+				
+				$where=array("username"=>$username,"pass"=>$pass);
+				$run=$this->select_where('admin',$where);
+				
+				$res=$run->num_rows; 
+				if($res==1) 
+				{
+					
+					$_SESSION['admin']=$username;
+					
+					echo "<script> 
+						alert('Login Success') 
+						window.location='dashboard';
+						</script>";
+					
+				}
+				
+			}
 			include_once('index.php');
 			break;
 			
@@ -121,10 +144,17 @@ class control extends model
 			$manage_vehicale_arr=$this->selectall('vehicale');
 			include_once('manage_vehicale.php');
 			break;
-			
+				
 			case '/manage_profile';
 			include_once('manage_profile.php');
 			break;
+			
+			case '/admin_logout':
+			unset($_SESSION['admin']);
+			echo "<script>
+			alert('Logout Success')
+			window.location='index';
+			</script>";
 			
 			default:
 			include_once('404.php');

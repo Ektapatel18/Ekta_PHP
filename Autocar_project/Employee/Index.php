@@ -1,4 +1,14 @@
+<?php
 
+if(isset($_SESSION['email']))
+{
+	echo "<script>
+	window.location='dashboard';
+	</script>";
+}
+
+
+?>
 <!--
 Author: W3layouts
 Author URL: http://w3layouts.com
@@ -8,7 +18,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Taxas</title>
+<title>login</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Minimal Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -24,17 +34,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body>
 	<div class="login">
 		<h1><a href="index">Vehicales </a></h1>
-		<h1><a href="index">Admin Login  </a></h1>
+		<h1><a href="index">Employee Login  </a></h1>
 		<div class="login-bottom">
 			<h2>Login</h2>
-			<form>
+			<form action="" method="post" enctype="multipart/form-data">
 			<div class="col-md-12">
 				<div class="login-mail">
-					<input type="text" placeholder="Email" required="">
+					<input type="text" placeholder="user name" name="user_name" required="">
 					<i class="fa fa-envelope"></i>
 				</div>
 				<div class="login-mail">
-					<input type="password" placeholder="Password" required="">
+					<input type="password" placeholder="Password" name="pass" required="">
 					<i class="fa fa-lock"></i>
 				</div>
 				   <a class="news-letter " href="#">
@@ -45,7 +55,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<div class="login-do">
 				<label class="hvr-shutter-in-horizontal login-sub">
-					<input type="submit" value="login">
+					<input type="submit" name="submit" value="login">
 					</label>
 			</div>
 			

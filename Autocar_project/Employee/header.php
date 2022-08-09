@@ -232,7 +232,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<li>
                         <a href="manage_vehicale" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage Vehicales</span> </a>
                     </li>
-					
+					<li>
+                        <a href="employee_logout" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Logout</span> </a>
+                    </li>
 					
                 </ul>
             </div>
