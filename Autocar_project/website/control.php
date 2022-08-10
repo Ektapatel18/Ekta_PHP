@@ -31,6 +31,10 @@ class control extends model
 			include_once('services.php');
 			break;
 			
+			case '/myprofile';
+			include_once('myprofile.php');
+			break;
+			
 			case '/login';
 			if(isset($_REQUEST['submit']))
 			{

@@ -51,6 +51,7 @@ class model
 		$run=$this->conn->query($sel);
 		return $run;
 	}
+
 }
 $obj=new model;
 ?>

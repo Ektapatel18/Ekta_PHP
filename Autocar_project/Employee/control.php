@@ -45,6 +45,7 @@ class control extends model
 			
 			case '/dashboard';
 			include_once('dashboard.php');
+
 			break;
 			
 			case '/manage_booking';
