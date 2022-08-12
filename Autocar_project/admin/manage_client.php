@@ -53,7 +53,7 @@ include_once('header.php');
 						<td><?php echo $c->PUC;?></td>
 						<td><?php echo $c->Insurance_policy;?></td>
 						<td><a href="#" class="btn btn-primary">Edit</a></td>
-						<td><a href="#" class="btn btn-danger">Delete</a></td>
+						<td><a href="delete?del_cli_id=<?php echo $c->cli_id;?>" class="btn btn-danger">Delete</a></td>
 					  </tr>
 					 <?php
 					}

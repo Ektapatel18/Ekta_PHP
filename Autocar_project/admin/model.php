@@ -51,7 +51,21 @@ class model
 		$run=$this->conn->query($sel);
 		return $run;
 	}
-
+	function delete_where($tbl,$where)
+	{
+		$key_arr=array_keys($where);
+		$value_arr=array_values($where);
+		
+		$del="delete from $tbl where 1=1";
+		$i=0;
+		foreach($where as $w)
+		{
+			echo $del.=" and $key_arr[$i]='$value_arr[$i]'";
+			$i++;
+		}
+		$run=$this->conn->query($del);
+		return $run;
+	}
 }
 $obj=new model;
 ?>
