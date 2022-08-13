@@ -27,8 +27,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="agileits-top">
 				<form action="" method="post" enctype="multipart/form-data">
 					<div class="styled-input w3ls-text">
-						<input type="text" name="user_name" required=""/>
-						<label>User Name</label>
+						<input type="text" name="name" required=""/>
+						<label>Name</label>
+						<span></span>
+					</div>
+					<div class="styled-input w3ls-text">
+						<input type="text" name="addres" required=""/>
+						<label>Address</label>
+						<span></span>
+					</div>
+					<div class="styled-input w3ls-text">
+						<input type="text" name="contact_no" required=""/>
+						<label>Contact No</label>
 						<span></span>
 					</div>
 					<div class="styled-input w3ls-text">
@@ -36,6 +46,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<label>Email ID</label>
 						<span></span>
 					</div>
+					<div class="styled-input w3ls-text">
+						<input type="text" name="user_name" required=""/>
+						<label>User Name</label>
+						<span></span>
+					</div>
+					
 					<div class="styled-input w3ls-text">
 						<input type="password" name="pass" required=""> 
 						<label>Password</label>

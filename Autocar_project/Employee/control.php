@@ -92,17 +92,95 @@ class control extends model
 			$manage_payment_arr=$this->selectall('payment');
 			include_once('manage_payment.php');
 			break;
+			
 			case '/manage_user';
 			$manage_user_arr=$this->selectall('customer');
 			include_once('manage_user.php');
 			break;
+			
 			case '/manage_vehicale';
 			$manage_vehicale_arr=$this->selectall('vehicale');
 			include_once('manage_vehicale.php');
 			break;
+			
 			case '/profile';
 			include_once('profile.php');
 			break;
+			
+			case '/delete';
+			if(isset($_REQUEST['del_cust_id']))
+			{
+				$cust_id=$_REQUEST['del_cust_id'];
+				$where=array("cust_id"=>$cust_id);
+				$res=$this->delete_where('customer',$where);
+				if($res)
+				{
+					echo "<script> alert('Delete successfully')
+					 window.location='manage_user';</script>";
+				}
+			}
+			if(isset($_REQUEST['del_cat_id']))
+			{
+				$cat_id=$_REQUEST['del_cat_id'];
+				$where=array("cat_id"=>$cat_id);
+				$run=$this->select_where('categories',$where);
+				$fetch=$run->fetch_object();
+				$cate_img=$fetch->cate_img;
+				
+				$res=$this->delete_where('categories',$where);
+				if($res)
+				{
+						unlink('img/'.$cate_img);
+						echo "<script> alert('Delete successfully')
+					          window.location='manage_categories';</script>";
+				}
+			}
+			if(isset($_REQUEST['del_cont_id']))
+			{
+				$cont_id=$_REQUEST['del_cont_id'];
+				$where=array("cont_id"=>$cont_id);
+				$res=$this->delete_where('contact',$where);
+				if($res)
+				{
+					echo "<script> alert('Delete successfully')
+					 window.location='manage_contact';</script>";
+				}
+			}
+			if(isset($_REQUEST['del_book_id']))
+			{
+				$book_id=$_REQUEST['del_book_id'];
+				$where=array("book_id"=>$book_id);
+				$res=$this->delete_where('booking',$where);
+				if($res)
+				{
+					echo "<script> alert('Delete successfully')
+					 window.location='manage_booking';</script>";
+				}
+			}
+			if(isset($_REQUEST['del_Pay_id']))
+			{
+				$Pay_id=$_REQUEST['del_Pay_id'];
+				$where=array("Pay_id"=>$Pay_id);
+				$res=$this->delete_where('payment',$where);
+				if($res)
+				{
+					echo "<script> alert('Delete successfully')
+					 window.location='manage_payment';</script>";
+				}
+			}
+			if(isset($_REQUEST['del_vehi_id']))
+			{
+				$vehi_id=$_REQUEST['del_vehi_id'];
+				$where=array("vehi_id"=>$vehi_id);
+				$res=$this->delete_where('vehicale',$where);
+				if($res)
+				{
+					echo "<script> alert('Delete successfully')
+					 window.location='manage_vehicale';</script>";
+				}
+			}
+			
+			
 			
 			case '/employee_logout':
 			unset($_SESSION['employee']);

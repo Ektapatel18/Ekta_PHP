@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html>
 <head>
-<title>Trendy Profile Widget Flat Responsive Widget Template :: w3layouts</title>
+<title>My Profile</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -22,11 +22,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </head>
 <body>
 	<div class="main">
-		<h1>Trendy Profile Widget</h1>
+		<h1>My Profile</h1>
 		<div class="agile_main_grid">
 			<div class="agile_main_grid_left">
 				<div class="agile_main_grid_left1">
-					<h2>Trendy Profile</h2>
+					<h2>My Profile</h2>
 				</div>
 				<div class="top-nav">
 				<span class="menu"><img src="images/menu.png" alt=""/></span>

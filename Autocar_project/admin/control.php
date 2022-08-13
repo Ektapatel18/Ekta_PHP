@@ -233,6 +233,28 @@ class control extends model
 					 window.location='manage_payment';</script>";
 				}
 			}
+			if(isset($_REQUEST['del_vehi_id']))
+			{
+				$vehi_id=$_REQUEST['del_vehi_id'];
+				$where=array("vehi_id"=>$vehi_id);
+				$res=$this->delete_where('vehicale',$where);
+				if($res)
+				{
+					 echo "<script> alert('Delete successfully')
+					 window.location='manage_vehicale';</script>";
+				}
+			}
+			if(isset($_REQUEST['del_cat_id']))
+			{
+				$cat_id=$_REQUEST['del_cat_id'];
+				$where=array("cat_id"=>$cat_id);
+				$res=$this->delete_where('categories',$where);
+				if($res)
+				{
+					 echo "<script> alert('Delete successfully')
+					 window.location='manage_categories';</script>";
+				}
+			}
 			
 			
 			case '/admin_logout':
