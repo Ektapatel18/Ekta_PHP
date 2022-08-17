@@ -32,7 +32,21 @@ class control extends model
 			break;
 			
 			case '/myprofile';
+			$where=array("user_name"=>$_SESSION['user_name']);
+			$run=$this->select_where('customer',$where);
+			$fetch=$run->fetch_object();
 			include_once('myprofile.php');
+			break;
+			
+			case '/editmyprofile':
+			if(isset($_REQUEST['edit_cust_id']))
+			{
+				$cust_id=$_REQUEST['edit_cust_id'];
+				$where=array("cust_id"=>$cust_id);
+				$run=$this->select_where('customer',$where);
+				$fetch=$run->fetch_object();
+			}
+			include_once('editmyprofile.php');
 			break;
 			
 			case '/login';
@@ -71,12 +85,15 @@ class control extends model
 			case '/signup';
 			if(isset($_REQUEST['submit']))
 			{
-				$user_name=$_REQUEST['user_name'];
+				$name=$_REQUEST['name'];
+				$addres=$_REQUEST['addres'];
+				$contact_no=$_REQUEST['contact_no'];
 				$email_id=$_REQUEST['email_id'];
+				$user_name=$_REQUEST['user_name'];
 				$password=$_REQUEST['pass'];
 				$pass=md5($password);
 
-				$arr=array("user_name"=>$user_name,"email_id"=>$email_id,"pass"=>$pass);
+				$arr=array("name"=>$name,"addres"=>$addres,"contact_no"=>$contact_no,"email_id"=>$email_id,"user_name"=>$user_name,"pass"=>$pass);
 				
 				$res=$this->insert('customer',$arr);
 				if($res)

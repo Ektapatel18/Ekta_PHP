@@ -1,3 +1,18 @@
+<?php
+
+if(isset($_SESSION['user_name']))
+{
+	
+}
+else	
+{
+	echo "<script>alert('login first');
+		window.location='index';
+		<script>";
+}
+
+?>
+
 <!--
 Author: W3layouts
 Author URL: http://w3layouts.com
@@ -55,30 +70,28 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<div class="agile_main_grid_left_grid">
 								<div class="agile_main_grid_left2">
 									<img src="images/11.png" alt=" " />
-									<h3>Carl Rider <a href="mailto:info@example.com">@carldesigner.com</a></h3>
-									<p>UI / UX / PHP Developer</p>
+									<h3>ID : <?php echo $fetch->cust_id;?></h3>
+									<h6>Name : <?php echo $fetch->name;?> </h6>
 									<div class="agile_main_grid_left2_grid">
 										<div class="agile_main_grid_left2_grid_left">
-											<h4>Following</h4>
-											<h5>342</h5>
+											<h6>Address : <?php echo $fetch->addres;?> </h6>
+											<h6>Contact No : <?php echo $fetch->contact_no;?> </h6>
 										</div>
 										<div class="agile_main_grid_left2_grid_left">
-											<h4>Posts</h4>
-											<h5>231</h5>
+											<h6>Email : <?php echo $fetch->email_id;?> </h6>
 										</div>
 										<div class="agile_main_grid_left2_grid_left">
-											<h4>Followers</h4>
-											<h5>123</h5>
+											<h6>User Name : <?php echo $fetch->user_name;?> </h6>
 										</div>
 										<div class="clear"> </div>
 									</div>
 									<div class="agile_main_grid_left2_grid_bottom">
-										<a href="#">Follow</a>
+										<a href="editmyprofile?edit_cust_id=<?php echo $fetch->cust_id;?>">Edit</a>
 									</div>
 								</div>
 							</div>
 						</li>
-						<li>
+					<!--	<li>
 							<div class="agile_main_grid_left_grid">
 								<div class="agile_main_grid_left2">
 									<img src="images/12.png" alt=" " />
@@ -131,7 +144,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 									</div>
 								</div>
 							</div>
-						</li>
+						</li>-->
 					</ul>
 				</div>
 				</section>
