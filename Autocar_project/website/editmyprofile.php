@@ -66,7 +66,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						</p>  
 					</div>
 					<div class="agileits-bottom"> 
-						<input type="submit"name="submit" value="Save"> 
+						<input type="submit" name="submit" value="Save"> 
 					</div>	
 				</form>
 			</div> 
@@ -75,9 +75,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	</div>	
 	<!-- //main -->
 	<!-- copyright -->
-	<div class="copyright">
-		<p>© 2017 Badge Signup Form . All rights reserved | Design by <a href="http://w3layouts.com/" target="_blank">W3layouts</a></p>
-	</div>
+	
 	<!-- //copyright -->
 </body>
 </html>
