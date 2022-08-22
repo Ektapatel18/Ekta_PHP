@@ -17,7 +17,7 @@ include_once('header.php');
 
 			<div class="blank-page" style="overflow:auto">
 				
-				<div class="table-responsive container mt-3">
+				<div class="container mt-3">
 				  <h2>Manage User</h2>
 
 				  <table class="table">
@@ -32,6 +32,7 @@ include_once('header.php');
 						<th>adharcard_no</th>
 						<th>driving_licence</th>
 						<th>Edit</th>
+						<th>Status</th>
 						<th>Delete</th>
 					  </tr>
 					</thead>
@@ -50,7 +51,9 @@ include_once('header.php');
 						<td><?php echo $c->adharcard_no;?></td>
 						<td><?php echo $c->driving_licence;?></td>
 						<td><a href="#" class="btn btn-primary">Edit</a></td>
+						<td><a href="status?status_cust_id=<?php echo $c->cust_id;?>" class="btn btn-primary"><?php echo $c->status;?></a></td>
 						<td><a href="delete?del_cust_id=<?php echo $c->cust_id;?>" class="btn btn-danger">Delete</a></td>
+						
 					  </tr>
 					  <?php
 						}

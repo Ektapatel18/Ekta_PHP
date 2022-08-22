@@ -59,7 +59,7 @@ class control extends model
 					if($res)
 					{
 						echo "<script> 
-						alert('Update Success') 
+						alert('Update Success'); 
 						window.location='myprofile';
 						</script>";
 					}

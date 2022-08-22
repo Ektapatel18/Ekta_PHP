@@ -65,7 +65,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						</p>  
 					</div>
 					<div class="agileits-bottom"> 
-						<input type="submit"name="submit" value="Sign Up"> 
+						<input type="submit" name="submit" value="Sign Up"> 
 					</div>	
 				</form>
 			</div> 
