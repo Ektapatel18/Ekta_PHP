@@ -25,12 +25,23 @@ class control extends model
 				$res=$run->num_rows;
 				if($res==1)
 				{
-					$_SESSION['employee']=$user_name;
-					echo "<script>
-					alert('Login Succesc')
-					window.location='dashboard';
-					</script>";
-					
+					$data=$run->fetch_object();
+					$status=$data->status;
+					if($status=="Unblock")
+					{
+						$_SESSION['employee']=$user_name;
+						echo "<script>
+						alert('Login Succesc')
+						window.location='dashboard';
+						</script>";
+					}
+					else
+					{
+						echo "<script> 
+							alert('Login Failed due Blocked') 
+							window.location='index';
+							</script>";
+					}
 				}
 				else
 				{

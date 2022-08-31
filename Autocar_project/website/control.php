@@ -81,21 +81,33 @@ class control extends model
 				$res=$run->num_rows; 
 				if($res==1) 
 				{
+					$data=$run->fetch_object();
+					$status=$data->status;
+					if($status=="Unblock")
+					{
+						$_SESSION['user_name']=$user_name;
+						
+						echo "<script> 
+							alert('Login Success') 
+							window.location='index';
+							</script>";
 					
-					$_SESSION['user_name']=$user_name;
-					
-					echo "<script> 
-						alert('Login Success') 
-						window.location='index';
-						</script>";
-					
+					}
+					else
+					{
+						echo "<script> 
+							alert('Login Failed due Blocked') 
+							window.location='login';
+							</script>";
+					}
 				}
 				else
 				{
 					echo "<script> 
-						alert('Login Failed due wrong credebntial') 
-						window.location='index';
+						alert('Login Failed due wrong credential') 
+						window.location='login';
 						</script>";
+						
 				}
 			}
 			include_once('login.php');
