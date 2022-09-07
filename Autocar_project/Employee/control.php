@@ -192,6 +192,40 @@ class control extends model
 			}
 			
 			
+			case '/status':
+			if(isset($_REQUEST['status_cust_id']))
+			{
+				$cust_id=$_REQUEST['status_cust_id'];
+				$where=array("cust_id"=>$cust_id);
+				
+				$run=$this->select_where('customer',$where);
+				$fetch=$run->fetch_object();
+				$status=$fetch->status;
+				
+				if($status=="Block")
+				{
+					$arr=array("status"=>"Unblock");
+					$res=$this->update('customer',$arr,$where);
+					if($res)
+					{
+						echo "<script> alert('Unblock successfully')
+								window.location='manage_user';</script>";
+					}
+				}
+				else
+				{
+					$arr=array("status"=>"Block");
+					$res=$this->update('customer',$arr,$where);
+					if($res)
+					{
+						unset($_SESSION['user_name']);
+						echo "<script> alert('Block successfully')
+								window.location='manage_user';</script>";
+					}
+				}
+			}
+			
+			
 			
 			case '/employee_logout':
 			unset($_SESSION['employee']);

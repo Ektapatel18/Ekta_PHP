@@ -35,6 +35,13 @@ class control extends model
 						</script>";
 					
 				}
+				else
+				{
+					echo "<script> 
+						alert('Login Failed') 
+						window.location='index';
+						</script>";	
+				}
 				
 			}
 			include_once('index.php');
@@ -145,8 +152,11 @@ class control extends model
 			include_once('manage_vehicale.php');
 			break;
 				
-			case '/manage_profile';
-			include_once('manage_profile.php');
+			case '/profile';
+			$where=array("username"=>$_SESSION['admin']);
+			$run=$this->select_where('admin',$where);
+			$fetch=$run->fetch_object();
+			include_once('profile.php');
 			break;
 			
 			case '/delete':

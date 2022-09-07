@@ -1,4 +1,16 @@
 <?php
+
+if(isset($_SESSION['admin']))
+{
+	
+}
+else
+{
+	echo "<script> 
+		alert('Login Success') 
+		window.location='dashboard';
+		</script>";
+}
 include_once('header.php');
 ?>
  
@@ -21,11 +33,11 @@ include_once('header.php');
 				<img src="images/pr.jpg" alt="">
 			</div>
 			<div class="col-md-8 profile-text">
-				<h6>Jack Dorsey</h6>
+				<h6>ID :<?php echo $fetch->admin_id;?></h6>
 				<table>
-				<tr><td>Department</td>  
+				<tr><td>UserName </td>  
 				<td>:</td>  
-				<td>Web Designer</td></tr>
+				<td><?php echo $fetch->username;?></td></tr>
 				
 				<tr>
 				<td>Email</td>
