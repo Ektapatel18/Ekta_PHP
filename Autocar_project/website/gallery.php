@@ -76,23 +76,23 @@ include_once ('header.php');
 			<div class="gallery-bottom">
 				<ul id="og-grid" class="og-grid">
 					<li>
-						<a href="single.html" data-largesrc="images/1.jpg" data-title="Mauris accumsan" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada purus a convallis dictum. Phasellus sodales varius diam, non sagittis lectus. Morbi id magna ultricies ipsum condimentum scelerisque vel quis felis.. Donec et purus nec leo interdum sodales nec sit amet magna. Ut nec suscipit purus, quis viverra urna.Mauris dapibus eros eget metus consectetur, quis sollicitudin mi aliquam. Nunc ut tortor at risus faucibus sagittis. Vivamus ut elit mi. Proin vitae metus ante. Aenean rutrum quis tellus sed congue. Mauris id molestie magna. Suspendisse eleifend in mi sed vestibulum.">
-							<img class="img-responsive" src="images/1.jpg" alt="img01"/>
+						<a href="single.html" data-largesrc="images/honda_activa.jpg" data-title="Mauris accumsan" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada purus a convallis dictum. Phasellus sodales varius diam, non sagittis lectus. Morbi id magna ultricies ipsum condimentum scelerisque vel quis felis.. Donec et purus nec leo interdum sodales nec sit amet magna. Ut nec suscipit purus, quis viverra urna.Mauris dapibus eros eget metus consectetur, quis sollicitudin mi aliquam. Nunc ut tortor at risus faucibus sagittis. Vivamus ut elit mi. Proin vitae metus ante. Aenean rutrum quis tellus sed congue. Mauris id molestie magna. Suspendisse eleifend in mi sed vestibulum.">
+							<img class="img-responsive" src="images/honda_activa.jpg" alt="img01"/>
 						</a>
 					</li>
 					<li>
-						<a href="single.html" data-largesrc="images/2.jpg" data-title="Vivamus mauris" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada purus a convallis dictum. Phasellus sodales varius diam, non sagittis lectus. Morbi id magna ultricies ipsum condimentum scelerisque vel quis felis.. Donec et purus nec leo interdum sodales nec sit amet magna. Ut nec suscipit purus, quis viverra urna.Mauris dapibus eros eget metus consectetur, quis sollicitudin mi aliquam. Nunc ut tortor at risus faucibus sagittis. Vivamus ut elit mi. Proin vitae metus ante. Aenean rutrum quis tellus sed congue. Mauris id molestie magna. Suspendisse eleifend in mi sed vestibulum.">
-							<img class="img-responsive" src="images/2.jpg" alt="img02"/>
+						<a href="single.html" data-largesrc="images/suzuki_bike.jpg" data-title="Vivamus mauris" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada purus a convallis dictum. Phasellus sodales varius diam, non sagittis lectus. Morbi id magna ultricies ipsum condimentum scelerisque vel quis felis.. Donec et purus nec leo interdum sodales nec sit amet magna. Ut nec suscipit purus, quis viverra urna.Mauris dapibus eros eget metus consectetur, quis sollicitudin mi aliquam. Nunc ut tortor at risus faucibus sagittis. Vivamus ut elit mi. Proin vitae metus ante. Aenean rutrum quis tellus sed congue. Mauris id molestie magna. Suspendisse eleifend in mi sed vestibulum.">
+							<img class="img-responsive" src="images/suzuki_bike.jpg" alt="img02"/>
 						</a>
 					</li>
 					<li>
-						<a href="single.html" data-largesrc="images/3.jpg" data-title="Aliquam fringilla" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada purus a convallis dictum. Phasellus sodales varius diam, non sagittis lectus. Morbi id magna ultricies ipsum condimentum scelerisque vel quis felis.. Donec et purus nec leo interdum sodales nec sit amet magna. Ut nec suscipit purus, quis viverra urna.Mauris dapibus eros eget metus consectetur, quis sollicitudin mi aliquam. Nunc ut tortor at risus faucibus sagittis. Vivamus ut elit mi. Proin vitae metus ante. Aenean rutrum quis tellus sed congue. Mauris id molestie magna. Suspendisse eleifend in mi sed vestibulum.">
-							<img class="img-responsive" src="images/3.jpg" alt="img03"/>
+						<a href="single.html" data-largesrc="images/apache.jpg" data-title="Aliquam fringilla" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada purus a convallis dictum. Phasellus sodales varius diam, non sagittis lectus. Morbi id magna ultricies ipsum condimentum scelerisque vel quis felis.. Donec et purus nec leo interdum sodales nec sit amet magna. Ut nec suscipit purus, quis viverra urna.Mauris dapibus eros eget metus consectetur, quis sollicitudin mi aliquam. Nunc ut tortor at risus faucibus sagittis. Vivamus ut elit mi. Proin vitae metus ante. Aenean rutrum quis tellus sed congue. Mauris id molestie magna. Suspendisse eleifend in mi sed vestibulum.">
+							<img class="img-responsive" src="images/apache.jpg" alt="img03"/>
 						</a>
 					</li>
 					<li>
-						<a href="single.html" data-largesrc="images/4.jpg" data-title="Nam lacinia" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada purus a convallis dictum. Phasellus sodales varius diam, non sagittis lectus. Morbi id magna ultricies ipsum condimentum scelerisque vel quis felis.. Donec et purus nec leo interdum sodales nec sit amet magna. Ut nec suscipit purus, quis viverra urna.Mauris dapibus eros eget metus consectetur, quis sollicitudin mi aliquam. Nunc ut tortor at risus faucibus sagittis. Vivamus ut elit mi. Proin vitae metus ante. Aenean rutrum quis tellus sed congue. Mauris id molestie magna. Suspendisse eleifend in mi sed vestibulum.">
-							<img class="img-responsive" src="images/4.jpg" alt="img01"/>
+						<a href="single.html" data-largesrc="images/Bajaj.jpg" data-title="Nam lacinia" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada purus a convallis dictum. Phasellus sodales varius diam, non sagittis lectus. Morbi id magna ultricies ipsum condimentum scelerisque vel quis felis.. Donec et purus nec leo interdum sodales nec sit amet magna. Ut nec suscipit purus, quis viverra urna.Mauris dapibus eros eget metus consectetur, quis sollicitudin mi aliquam. Nunc ut tortor at risus faucibus sagittis. Vivamus ut elit mi. Proin vitae metus ante. Aenean rutrum quis tellus sed congue. Mauris id molestie magna. Suspendisse eleifend in mi sed vestibulum.">
+							<img class="img-responsive" src="images/Bajaj.jpg" alt="img01"/>
 						</a>
 					</li>
 					<li>
@@ -120,56 +120,7 @@ include_once ('header.php');
 			</div>
 		</div>
 	</div>
-
-	<div class="footer2">
-		<div class="container">
-			<div class="ftr2-grids">
-				<div class="col-md-4 ftr2-grid1">
-					<h3>About Us</h3>
-					<ul>
-						<li><a href="about">About</a></li>
-						<li><a href="services">Services</a></li>
-						<!--<li><a href="blog">Blog</a></li>-->
-						<li><a href="gallery">Gallery</a></li>
-						<li><a href="contact">Contact Us</a></li>
-					</ul>
-				</div>
-				<div class="col-md-4 ftr2-grid2">
-					<h3>Latest Tweets</h3>
-					<div class="ftr2-grid">
-						<p>It is a long established fact that a reader will be distracted by the of a reader page when at its layout.</p>
-						<a href="#">1 Hour ago</a>
-					</div>
-					<div class="ftr2-grid">
-						<p>It is a long established fact that a reader will be distracted by the of a reader page when at its layout.</p>
-						<a href="#">3 Hour ago</a>
-					</div>
-				</div>
-				<div class="col-md-4 ftr6-grid3">
-					<h3>Get in Touch</h3>
-					<p>It is a long established fact that a reader will be distracted by the r- eadable content of a page when looking at its
-						layout.</p>
-					<form>
-						<input type="text" class="text" value="Enter Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter Email';}">
-						<input type="submit" value="Subscribe" />
-					</form>
-					<div class="social">
-						<ul>
-							<li><a href="#"><i class="facebook"></i></a></li>
-							<li><a href="#"><i class="twitter"></i></a></li>
-							<li><a href="#"><i class="dribble"></i></a></li>
-							<li><a href="#"><i class="google"></i></a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="clearfix"></div>
-			</div>
-		</div>
-		<div class="col-md-8 ftr2-bottom">
-			<p>Copyright &copy; 2015 <span>Auto cars</span> All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
-		</div>
-	</div>
-	<!---->
+	
 	<script src="js/modernizr.custom.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/component.css" />
 	<script src="js/jquery.min.js"></script>
@@ -181,7 +132,7 @@ include_once ('header.php');
 		});
 	</script>
 	<script src="js/bootstrap.js"></script>
-	<!---->
-</body>
 
-</html>
+	<?php
+	include_once('footer.php');
+	?>

@@ -1,6 +1,18 @@
 <?php
+if(isset($_SESSION['employee']))
+{
+	
+}
+else
+{
+	echo "<script>
+		alert('Login Success');
+		window.location='dashboard';
+		</script>";
+}
 include_once('header.php');
 ?>
+
  
  	<!--banner-->	
 		    <div class="banner">
@@ -21,26 +33,31 @@ include_once('header.php');
 				<img src="images/pic.jpg" alt="">
 			</div>
 			<div class="col-md-8 profile-text">
-				<h6>Patel Ekta</h6>
+				<h6>ID :<?php echo $fetch->emp_id;?></h6>
 				<table>
-				<tr><td>Department</td>  
+				<tr><td>Name</td>  
 				<td>:</td>  
-				<td>Web Designer</td></tr>
+				<td><?php echo $fetch->name;?></td></tr>
 				
 				<tr>
-				<td>Email</td>
+				<td>Address</td>
 				<td> :</td>
-				<td><a href="info@gmail.com">epatel@gmail.com</a></td>
+				<td><?php echo $fetch->addres;?></td>
 				</tr>
 				<tr>
-				<td>Skills</td>
+				<td>Contact No</td>
 				<td> :</td>
-				<td> HTML, CSS,Jqury, Bootstrap</td>
+				<td> <?php echo $fetch->contact_no;?></td>
 				</tr>
 				<tr>
-				<td>Country </td>
+				<td>Email </td>
 				<td>:</td>
-				<td> United Arab Emirates</td>
+				<td> <?php echo $fetch->email_id;?></td>
+				</tr>
+				<tr>
+				<td>User Name </td>
+				<td>:</td>
+				<td> <?php echo $fetch->user_name;?></td>
 				</tr>
 				</table>
 			</div>

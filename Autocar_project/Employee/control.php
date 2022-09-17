@@ -115,6 +115,9 @@ class control extends model
 			break;
 			
 			case '/profile';
+			$where=array("user_name"=>$_SESSION['employee']);
+			$run=$this->select_where('employee',$where);
+			$fetch=$run->fetch_object();
 			include_once('profile.php');
 			break;
 			

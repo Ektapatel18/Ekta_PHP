@@ -71,20 +71,20 @@ include_once ('header.php');
 				<ul class="rslides" id="slider3">
 					<li>
 						<div class="banner-info">
-							<h3>Aliquam ut mauris vestibulum, condimentum neque vitae nulla.</h3>
-							<p>Pellentesque congue libero accumsan porta.</p>
+							<h3></h3>
+							<p></p>
 						</div>
 					</li>
 					<li>
 						<div class="banner-info">
-							<h3>Nam et urna interdum blandit condimentum vivamus neque vitae.</h3>
-							<p>Sed eu quam ut orci ullamcorper tincidunt quam.</p>
+							<h3></h3>
+							<p></p>
 						</div>
 					</li>
 					<li>
 						<div class="banner-info">
-							<h3>Cras pretium metus sed justo condimentum, sed commodo nulla.</h3>
-							<p>Nulla eu sapien et eros finibus congue.</p>
+							<h3></h3>
+							<p></p>
 						</div>
 					</li>
 				</ul>

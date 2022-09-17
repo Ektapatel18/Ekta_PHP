@@ -12,7 +12,13 @@ function validate()
 		alert("Please fill out Firstname");
 		return false;
 	}
-	
+	var alpha=/^[A-Za-z]+$/;
+	if(!alpha.test(name))
+	{
+		alert("Please Fill out Alpha characters");
+		return false();
+	}
+
 	var addres=document.forms["empform"]["addres"].value;
 	if(addres=="" || addres==null)
 	{
@@ -26,11 +32,23 @@ function validate()
 		alert("Please fill out Contact Number");
 		return false;
 	}
+	var phone=/^[0-9]{10,11}$/;
+	if(!phone.test(contact_no))
+	{
+		alert("Please fill proper phone number");
+		return false;
+	}
 	
 	var email_id=document.forms["empform"]["email_id"].value;
 	if(email_id=="" || email_id==null)
 	{
 		alert("Please fill out Email");
+		return false;
+	}
+	var mail=/^[a-zA-Z0-9_]+@[a-zA-Z]+\.[a-zA-Z]{2,4}$/;
+	if(!mail.test(email_id))
+	{
+		alert("Please fill out Proper Email Id");
 		return false;
 	}
 	

@@ -182,7 +182,8 @@ class control extends model
 					 echo "<script> alert('Delete successfully')
 					 window.location='manage_client';</script>";
 				}
-					
+	
+	
 			}
 			if(isset($_REQUEST['del_cust_id']))
 			{

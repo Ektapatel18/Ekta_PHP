@@ -2,6 +2,73 @@
 include_once('header.php');
 ?>
  
+ <script>
+	function validate()
+	{
+		var name=document.forms["clientform"]["name"].value;
+		if(name=="" || name==null)
+		{
+			alert("Please fill out Firstname");
+			return false;
+		}
+		var addres=document.forms["clientform"]["addres"].value;
+		if(addres=="" || addres==null)
+		{
+			alert("Please fill out Address");
+			return false;
+		}
+		var contact_no=document.forms["clientform"]["contact_no"].value;
+		if(contact_no=="" || contact_no==null)
+		{
+			alert("Please fill out contact Number");
+			return false;
+		}
+		var email_id=document.forms["clientform"]["email_id"].value;
+		if(email_id=="" || email_id==null)
+		{
+			alert("Please fill out contact Email");
+			return false;
+		}
+		var user_name=document.forms["clientform"]["user_name"].value;
+		if(user_name=="" || user_name==null)
+		{
+			alert("Please fill out contact User Name");
+			return false;
+		}
+		var pass=document.forms["clientform"]["pass"].value;
+		if(pass=="" || pass==null)
+		{
+			alert("Please fill out contact User Password");
+			return false;
+		}
+		var Adharcard_no=document.forms["clientform"]["Adharcard_no"].value;
+		if(Adharcard_no=="" || Adharcard_no==null)
+		{
+			alert("Please fill out contact User Adharcard");
+			return false;
+		}
+		var driving_licence=document.forms["clientform"]["driving_licence"].value;
+		if(driving_licence=="" || driving_licence==null)
+		{
+			alert("Please fill out contact User Driving Licence");
+			return false;
+		}
+		var PUC=document.forms["clientform"]["PUC"].value;
+		if(PUC=="" || PUC==null)
+		{
+			alert("Please fill out contact User PUC");
+			return false;
+		}
+		var Insurance_policy=document.forms["clientform"]["Insurance_policy"].value;
+		if(Insurance_policy=="" || Insurance_policy==null)
+		{
+			alert("Please fill out contact User Insurance ");
+			return false;
+		}
+	}
+ 
+ </script>
+ 
  	<!--banner-->	
 		   <div class="banner">
 		    	<h2>
@@ -21,36 +88,36 @@ include_once('header.php');
          	<div class="vali-form">
             <div class="col-md-12 form-group1">
               <label class="control-label">Firstname</label>
-              <input type="text" name="name" placeholder="Firstname" required="">
+              <input type="text" name="name" placeholder="Firstname" >
             </div>
             <div class="clearfix"> </div>
             </div>
             
 			<div class="col-md-12 form-group1">
               <label class="control-label">Address</label>
-              <textarea class="form-control" name="addres" placeholder="Address" required=""></textarea>
+              <textarea class="form-control" name="addres" placeholder="Address" ></textarea>
             </div>
 			
 			<div class="col-md-12 form-group1 form-last">
               <label class="control-label">Contact No</label>
-              <input type="text" name="contact_no" placeholder="Mobile Number" required="">
+              <input type="text" name="contact_no" placeholder="Mobile Number" >
             </div>
 			<div class="clearfix"> </div>
 			
             <div class="col-md-12 form-group1 group-mail">
               <label class="control-label">Email ID</label>
-              <input type="text" name="email_id" placeholder="Email ID" required="">
+              <input type="text" name="email_id" placeholder="Email ID" >
             </div>
              <div class="clearfix"> </div>
 			 
             <div class="col-md-12 form-group1 group-mail">
               <label class="control-label">User Name</label>
-              <input type="text" name="user_name" placeholder="User Name" required="">
+              <input type="text" name="user_name" placeholder="User Name" >
             </div>
 			
             <div class="col-md-12 form-group1">
               <label class="control-label">Create a password</label>
-              <input type="password" name="pass" placeholder="Create a password" required="">
+              <input type="password" name="pass" placeholder="Create a password" >
             </div>
              
              <div class="clearfix"> </div>
@@ -58,27 +125,27 @@ include_once('header.php');
              
              <div class="col-md-12 form-group1 group-mail">
               <label class="control-label">Adharcard No</label>
-              <input type="text" name="Adharcard_no" placeholder="Adharcard No" required="">
+              <input type="text" name="Adharcard_no" placeholder="Adharcard No" >
             </div>
 			
              <div class="clearfix"> </div>
            
             <div class="col-md-12 form-group1 group-mail">
               <label class="control-label ">Driving Licence</label>
-              <input type="text" name="driving_licence" placeholder="Driving Licence" required="">
+              <input type="text" name="driving_licence" placeholder="Driving Licence" >
             </div>
 			
 			<div class="clearfix"> </div>
             <div class="col-md-12 form-group1 group-mail">
               <label class="control-label ">PUC</label>
-              <input type="text" name="PUC" placeholder="PUC" required="">
+              <input type="text" name="PUC" placeholder="PUC" >
             </div>
 			
 			<div class="clearfix"> </div>
            
             <div class="col-md-12 form-group1 group-mail">
               <label class="control-label ">Insurance Policy</label>
-              <input type="text" name="Insurance_policy" placeholder="Insurance Policy" required="">
+              <input type="text" name="Insurance_policy" placeholder="Insurance Policy" >
             </div>
 			
 			
