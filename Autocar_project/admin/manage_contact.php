@@ -41,7 +41,7 @@ include_once('header.php');
 						<td><?php echo $c->name;?></td>
 						<td><?php echo $c->email_id;?></td>
 						<td><?php echo $c->contact_no;?></td>
-						<td><a href="#" class="btn btn-primary">Edit</a></td>
+						<td><a href="editcontact?edit_cont_id=<?php echo $c->cont_id;?>" class="btn btn-primary">Edit</a></td>
 						<td><a href="delete?del_cont_id=<?php echo $c->cont_id;?>" class="btn btn-danger">Delete</a></td>
 					  </tr>
 					  <?php

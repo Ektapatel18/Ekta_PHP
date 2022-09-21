@@ -334,6 +334,227 @@ class control extends model
 			}
 			break;
 			
+			
+			case '/editemp':
+			if(isset($_REQUEST['edit_emp_id']))
+			{
+				$emp_id=$_REQUEST['edit_emp_id'];
+				$where=array("emp_id"=>$emp_id);
+				$run=$this->select_where('employee',$where);
+				$fetch=$run->fetch_object();
+				
+				if(isset($_REQUEST['submit']))
+				{
+					$emp_id=$_REQUEST['emp_id'];
+					$name=$_REQUEST['name'];
+					$addres=$_REQUEST['addres'];
+					$contact_no=$_REQUEST['contact_no'];
+					$email_id=$_REQUEST['email_id'];
+					$user_name=$_REQUEST['user_name'];
+					
+					$arr=array("emp_id"=>$emp_id,"name"=>$name,"addres"=>$addres,"contact_no"=>$contact_no,"email_id"=>$email_id,"user_name"=>$user_name);
+					$res=$this->update('employee',$arr,$where);
+					if($res)
+					{
+						echo "<script> 
+						alert('Update Success'); 
+						window.location='manage_employee';
+						</script>";
+					}
+				}
+			}
+			
+			include_once('editemp.php');
+			break;
+			
+			case '/editclient':
+			if(isset($_REQUEST['edit_cli_id']))
+			{
+				$cli_id=$_REQUEST['edit_cli_id'];
+				$where=array("cli_id"=>$cli_id);
+				$run=$this->select_where('client',$where);
+				$fetch=$run->fetch_object();
+				
+				if(isset($_REQUEST['submit']))
+				{
+					$cli_id=$_REQUEST['cli_id'];
+					$name=$_REQUEST['name'];
+					$addres=$_REQUEST['addres'];
+					$contact_no=$_REQUEST['contact_no'];
+					$email_id=$_REQUEST['email_id'];
+					$user_name=$_REQUEST['user_name'];
+					$Adharcard_no=$_REQUEST['Adharcard_no'];
+					$driving_licence=$_REQUEST['driving_licence'];
+					$PUC=$_REQUEST['PUC'];
+					$Insurance_policy=$_REQUEST['Insurance_policy'];
+					
+					$arr=array("cli_id"=>$cli_id,"name"=>$name,"addres"=>$addres,"contact_no"=>$contact_no,"email_id"=>$email_id,"user_name"=>$user_name,"Adharcard_no"=>$Adharcard_no,"driving_licence"=>$driving_licence,"PUC"=>$PUC,"Insurance_policy"=>$Insurance_policy);
+					$res=$this->update('client',$arr,$where);
+					if($res)
+					{
+						echo "<script> 
+						alert('Update Success'); 
+						window.location='manage_client';
+						</script>";
+					}
+				}
+			}
+			
+			include_once('editclient.php');
+			break;
+			
+			case '/edituser':
+			if(isset($_REQUEST['edit_cust_id']))
+			{
+				$cust_id=$_REQUEST['edit_cust_id'];
+				$where=array("cust_id"=>$cust_id);
+				$run=$this->select_where('customer',$where);
+				$fetch=$run->fetch_object();
+				
+				if(isset($_REQUEST['submit']))
+				{
+					$cust_id=$_REQUEST['cust_id'];
+					$name=$_REQUEST['name'];
+					$addres=$_REQUEST['addres'];
+					$contact_no=$_REQUEST['contact_no'];
+					$email_id=$_REQUEST['email_id'];
+					$user_name=$_REQUEST['user_name'];
+					$adharcard_no=$_REQUEST['adharcard_no'];
+					$driving_licence=$_REQUEST['driving_licence'];
+					
+					
+					$arr=array("cust_id"=>$cust_id,"name"=>$name,"addres"=>$addres,"contact_no"=>$contact_no,"email_id"=>$email_id,"user_name"=>$user_name,"adharcard_no"=>$adharcard_no,"driving_licence"=>$driving_licence);
+					$res=$this->update('customer',$arr,$where);
+					if($res)
+					{
+						echo "<script> 
+						alert('Update Success'); 
+						window.location='manage_user';
+						</script>";
+					}
+				}
+			}
+			include_once('edituser.php');
+			break;
+			
+			case '/editcontact':
+			if(isset($_REQUEST['edit_cont_id']))
+			{
+				$cont_id=$_REQUEST['edit_cont_id'];
+				$where=array("cont_id"=>$cont_id);
+				$run=$this->select_where('contact',$where);
+				$fetch=$run->fetch_object();
+				
+				if(isset($_REQUEST['submit']))
+				{
+					$cont_id=$_REQUEST['cont_id'];
+					$name=$_REQUEST['name'];
+					$email_id=$_REQUEST['email_id'];
+					$contact_no=$_REQUEST['contact_no'];
+					
+					$arr=array("cont_id"=>$cont_id,"name"=>$name,"email_id"=>$email_id,"contact_no"=>$contact_no);
+					$res=$this->update('contact',$arr,$where);
+					if($res)
+					{
+						echo "<script> 
+						alert('Update Success'); 
+						window.location='manage_contact';
+						</script>";
+					}
+				}
+			}
+			
+			include_once('editcontact.php');
+			break;
+			
+			case '/editfeedback':
+			if(isset($_REQUEST['edit_feedback_id']))
+			{
+				$feedback_id=$_REQUEST['edit_feedback_id'];
+				$where=array("feedback_id"=>$feedback_id);
+				$run=$this->select_where('feedback',$where);
+				$fetch=$run->fetch_object();
+				
+				if(isset($_REQUEST['submit']))
+				{
+					$feedback_id=$_REQUEST['feedback_id'];
+					$cust_id=$_REQUEST['cust_id'];
+					$comme=$_REQUEST['comme'];
+					
+					
+					$arr=array("feedback_id"=>$feedback_id,"cust_id"=>$cust_id,"comme"=>$comme);
+					$res=$this->update('feedback',$arr,$where);
+					if($res)
+					{
+						echo "<script> 
+						alert('Update Success'); 
+						window.location='manage_feedback';
+						</script>";
+					}
+				}
+			}	
+			include_once('editfeedback.php');
+			break;
+			
+			case '/editbooking':
+			if(isset($_REQUEST['edit_book_id']))
+			{
+				$book_id=$_REQUEST['edit_book_id'];
+				$where=array("book_id"=>$book_id);
+				$run=$this->select_where('booking',$where);
+				$fetch=$run->fetch_object();
+				
+				if(isset($_REQUEST['submit']))
+				{
+					$book_id=$_REQUEST['book_id'];
+					$cust_id=$_REQUEST['cust_id'];
+					$Vehi_id=$_REQUEST['Vehi_id'];
+					$book_date=$_REQUEST['book_date'];
+					$booking_time=$_REQUEST['booking_time'];
+					
+					$arr=array("book_id"=>$book_id,"cust_id"=>$cust_id,"Vehi_id"=>$Vehi_id,"book_date"=>$book_date,"booking_time"=>$booking_time);
+					$res=$this->update('booking',$arr,$where);
+					if($res)
+					{
+						echo "<script> 
+						alert('Update Success'); 
+						window.location='manage_booking';
+						</script>";
+					}
+				}
+			}
+			include_once('editbooking.php');
+			break;
+			
+			case '/editpayment':
+			if(isset($_REQUEST['edit_Pay_id']))
+			{
+				$Pay_id=$_REQUEST['edit_Pay_id'];
+				$where=array("Pay_id"=>$Pay_id);
+				$run=$this->select_where('payment',$where);
+				$fetch=$run->fetch_object();
+				
+				if(isset($_REQUEST['submit']))
+				{
+					$Pay_id=$_REQUEST['Pay_id'];
+					$cust_id=$_REQUEST['cust_id'];
+					$book_id=$_REQUEST['book_id'];
+					$pay_type=$_REQUEST['pay_type'];
+					
+					$arr=array("Pay_id"=>$Pay_id,"cust_id"=>$cust_id,"book_id"=>$book_id,"pay_type"=>$pay_type);
+					$res=$this->update('payment',$arr,$where);
+					if($res)
+					{
+						echo "<script> 
+						alert('Update Success'); 
+						window.location='manage_payment';
+						</script>";
+					}
+				}
+			}
+			include_once('editpayment.php');
+			break;
+			
 			case '/admin_logout':
 			unset($_SESSION['admin']);
 			echo "<script>
