@@ -24,9 +24,9 @@ include_once('header.php');
 			return false;
 		}
 		var message=document.forms["contactform"]["message"].value;
-		if(message=="" || email_id==null)
+		if(message=="" || message==null)
 		{
-			alert("Please fill out contact message");
+			alert("Please fill out message");
 			return false;
 		}
 		
@@ -79,6 +79,7 @@ include_once('header.php');
               <label class="control-label">Message</label>
               <textarea class="form-control" name="message" placeholder="Message" ><?php echo $fetch->message;?></textarea>
             </div>
+			
              <div class="clearfix"> </div>
 			
             <div class="col-md-12 form-group">

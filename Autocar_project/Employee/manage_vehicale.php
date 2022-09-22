@@ -45,7 +45,7 @@ include_once('header.php');
 						<td><?php echo $v->des;?></td>
 						<td><?php echo $v->price;?></td>
 						<td><img src="img/<?php echo $v->img;?>" width="80px" height="80px"/></td>
-						<td><a href="#" class="btn btn-primary">Edit</a></td>
+						<td><a href="editvehicale?edit_vehi_id=<?php echo $v->vehi_id;?>" class="btn btn-primary">Edit</a></td>
 						<td><a href="delete?del_vehi_id=<?php echo $v->vehi_id;?>" class="btn btn-danger">Delete</a></td>
 					  </tr>
 					 <?php

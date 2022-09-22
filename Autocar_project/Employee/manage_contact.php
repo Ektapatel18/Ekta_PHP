@@ -27,6 +27,7 @@ include_once('header.php');
 						<th>Name</th>
 						<th>Email_id</th>
 						<th>Contact_no</th>
+						<th>Message</th>
 						<th>Edit</th>
 						<th>Delete</th>
 					  </tr>
@@ -42,7 +43,8 @@ include_once('header.php');
 						<td><?php echo $c->name;?></td>
 						<td><?php echo $c->email_id;?></td>
 						<td><?php echo $c->contact_no;?></td>
-						<td><a href="#" class="btn btn-primary">Edit</a></td>
+						<td><?php echo $c->message;?></td>
+						<td><a href="editcontact?edit_cont_id=<?php echo $c->cont_id;?>" class="btn btn-primary">Edit</a></td>
 						<td><a href="delete?del_cont_id=<?php echo $c->cont_id;?>" class="btn btn-danger">Delete</a></td>
 					  </tr>
 					  <?php
@@ -56,6 +58,6 @@ include_once('header.php');
 	</div>
 	
 	<!--//faq-->
-	<?php
+	<?ph
 include_once('footer.php');
 ?>

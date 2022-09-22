@@ -451,8 +451,9 @@ class control extends model
 					$name=$_REQUEST['name'];
 					$email_id=$_REQUEST['email_id'];
 					$contact_no=$_REQUEST['contact_no'];
+					$message=$_REQUEST['message'];
 					
-					$arr=array("cont_id"=>$cont_id,"name"=>$name,"email_id"=>$email_id,"contact_no"=>$contact_no);
+					$arr=array("cont_id"=>$cont_id,"name"=>$name,"email_id"=>$email_id,"contact_no"=>$contact_no,"message"=>$message);
 					$res=$this->update('contact',$arr,$where);
 					if($res)
 					{
@@ -554,6 +555,114 @@ class control extends model
 			}
 			include_once('editpayment.php');
 			break;
+			
+			case '/editvehicale':
+			if(isset($_REQUEST['edit_vehi_id']))
+			{
+				$vehi_id=$_REQUEST['edit_vehi_id'];
+				$where=array("vehi_id"=>$vehi_id);
+				$run=$this->select_where('vehicale',$where);
+				$fetch=$run->fetch_object();
+				$old_file=$fetch->img;
+				
+				if(isset($_REQUEST['submit']))
+				{
+					$vehi_id=$_REQUEST['vehi_id'];
+					$cli_id=$_REQUEST['cli_id'];
+					$name=$_REQUEST['name'];
+					$price=$_REQUEST['price'];
+					
+					if($_FILES['img']['size']>0)
+					{
+						$img=$_FILES['img']['name'];  
+						$path='img/'.$img;
+						$dup_file=$_FILES['img']['tmp_name'];
+						move_uploaded_file($dup_file,$path);
+				
+					
+					$arr=array("vehi_id"=>$vehi_id,"cli_id"=>$cli_id,"name"=>$name,"price"=>$price,"img"=>$img);
+					$res=$this->update('vehicale',$arr,$where);
+					if($res)
+					{
+						unlink('img/'.$old_file);
+						echo "<script> 
+						alert('Update Success'); 
+						window.location='manage_vehicale';
+						</script>";
+					}
+				}
+				else
+				{
+					$arr=array("vehi_id"=>$vehi_id,"cli_id"=>$cli_id,"name"=>$name,"price"=>$price,"img"=>$img);
+					$res=$this->update('vehicale',$arr,$where);
+					if($res)
+					{
+						
+						echo "<script> 
+						alert('Update Success'); 
+						window.location='manage_vehicale';
+						</script>";
+					}
+				}
+				
+				}
+			}
+			include_once('editvehicale.php');
+			break;
+			
+			case '/editcategories':
+			if(isset($_REQUEST['edit_cat_id']))
+			{
+				$cat_id=$_REQUEST['edit_cat_id'];
+				$where=array("cat_id"=>$cat_id);
+				$run=$this->select_where('categories',$where);
+				$fetch=$run->fetch_object();
+				$old_file=$fetch->cate_img;
+				
+				if(isset($_REQUEST['submit']))
+				{
+					$cat_id=$_REQUEST['cat_id'];
+					$cate_name=$_REQUEST['cate_name'];
+					$cate_desc=$_REQUEST['cate_desc'];
+				
+					if($_FILES['cate_img']['size']>0)
+					{
+						$cate_img=$_FILES['cate_img']['name'];  
+						$path='img/cate_img/'.$cate_img;
+						$dup_file=$_FILES['cate_img']['tmp_name'];
+						move_uploaded_file($dup_file,$path);
+				
+					
+					$arr=array("cat_id"=>$cat_id,"cate_name"=>$cate_name,"cate_desc"=>$cate_desc,"cate_img"=>$cate_img);
+					$res=$this->update('categories',$arr,$where);
+					if($res)
+					{
+						unlink('img/cate_img/'.$old_file);
+						echo "<script> 
+						alert('Update Success'); 
+						window.location='manage_categories';
+						</script>";
+					}
+				}
+				else
+				{
+					$arr=array("cat_id"=>$cat_id,"cate_name"=>$cate_name,"cate_desc"=>$cate_desc,"cate_img"=>$cate_img);
+					$res=$this->update('categories',$arr,$where);
+					if($res)
+					{
+						unlink('img/cate_img/'.$old_file);
+						echo "<script> 
+						alert('Update Success'); 
+						window.location='manage_categories';
+						</script>";
+					}
+				}
+				
+				}
+			}
+			include_once('editcategories.php');
+			break;
+			
 			
 			case '/admin_logout':
 			unset($_SESSION['admin']);

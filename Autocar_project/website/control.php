@@ -16,10 +16,32 @@ class control extends model
 			case '/index';
 			include_once('index.php');
 			break;
+			
 			case '/about';
 			include_once('about.php');
 			break;
+			
 			case '/contact';
+			if(isset($_REQUEST['submit']))
+			{
+				$name=$_REQUEST['name'];
+				$email_id=$_REQUEST['email_id'];
+				$contact_no=$_REQUEST['contact_no'];
+				$message=$_REQUEST['message'];
+				
+				$arr=array("name"=>$name,"email_id"=>$email_id,"contact_no"=>$contact_no,"message"=>$message);
+				
+				$res=$this->insert('contact',$arr);
+				if($res)
+				{
+					echo "<script> alert('Inquiry Success')</script>";
+				}
+				else
+				{
+					echo "<script> alert('Inquiry Not Success')</script>";
+				}
+				
+			}
 			include_once('contact.php');
 			break;
 			
