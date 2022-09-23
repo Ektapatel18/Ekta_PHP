@@ -47,6 +47,11 @@ include_once ('header.php');
 				</div>
 				<div class="clearfix"></div>
 			</div>
+			
+			<?php
+					if(isset($_SESSION['user_name']))
+					{
+					?>
 			<nav class="navbar navbar-default">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -59,14 +64,38 @@ include_once ('header.php');
 			   <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
 						<li class="active"><a href="index">Home <span class="sr-only">(current)</span></a></li>
-						<li><a href="about">About</a></li>
-						<li><a href="services">Services</a></li>
-						<!--<li><a href="blog">Blog</a></li>-->
-						<li><a href="gallery">Gallery</a></li>
+						<li><a href="categories">Categories</a></li>
+						<li><a href="booking">Booking</a></li>
+						<li><a href="vehicales">Available Vehicales</a></li>
 						<li><a href="contact">Contact Us</a></li>
 					</ul>
 				</div>
 			</nav>
+			<?php
+					}
+					else
+					{
+						?>
+						<nav class="navbar navbar-default">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					  </button>
+				</div>
+			   <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="index">Home <span class="sr-only">(current)</span></a></li>
+						<li><a href="categories">Categories</a></li>
+						<li><a href="contact">Contact Us</a></li>
+					</ul>
+				</div>
+			</nav>
+					<?php	
+					}
+					?>
 			<div id="top" class="callbacks_container">
 				<ul class="rslides" id="slider3">
 					<li>
@@ -168,43 +197,30 @@ include_once ('header.php');
 	<div class="feature_sec">
 		<div class="container">
 			<div class="feature_head">
-				<h3>Featured News</h3>
+				<h3>Available Vehicales</h3>
 				<span></span>
 			</div>
 			<ul id="flexiselDemo3">
+			
+			<?php
+			
+			foreach($fetcharr as $data)
+			{
+				?>
 				<li>
 					<div class="biseller-column">
-						<a href="#"><img src="images/pic6.jpg" alt=""/></a>
-						<h4>Donec lacinia</h4>
-						<p>Cras pulvinar iaculis ex. Nullam vitae justo vel sapien malesuada varius ac blandit egestas nec felis. Nunc pharetra.
-							</p>
+						<a href="#"><img src="../employee/img/cate_img/<?php echo $data->img;?>" height="200px" width="200px" alt=""/></a>
+						<h4><?php echo $data->name;?></h4>
+						<h5><?php echo $data->des;?></h5>
 						<a class="more hvr-bounce-to-bottom" href="gallery">Read More..</a>
 					</div>
 				</li>
-				<li>
-					<div class="biseller-column">
-						<a href="#"><img src="images/pic5.jpg" alt=""/></a>
-						<h4>Donec lacinia</h4>
-						<p>Cras pulvinar iaculis ex. Nullam vitae justo vel sapien malesuada varius ac blandit egestas nec felis. Nunc pharetra.</p>
-						<a class="more hvr-bounce-to-bottom" href="gallery">Read More..</a>
-					</div>
-				</li>
-				<li>
-					<div class="biseller-column">
-						<a href="#"><img src="images/pic8.jpg" alt=""/></a>
-						<h4>Donec lacinia</h4>
-						<p>Cras pulvinar iaculis ex. Nullam vitae justo vel sapien malesuada varius ac blandit egestas nec felis. Nunc pharetra.</p>
-						<a class="more hvr-bounce-to-bottom" href="gallery">Read More..</a>
-					</div>
-				</li>
-				<li>
-					<div class="biseller-column">
-						<a href="#"><img src="images/pic4.jpg" alt=""/></a>
-						<h4>Donec lacinia</h4>
-						<p>Cras pulvinar iaculis ex. Nullam vitae justo vel sapien malesuada varius ac blandit egestas nec felis. Nunc pharetra.</p>
-						<a class="more hvr-bounce-to-bottom" href="gallery">Read More..</a>
-					</div>
-				</li>
+				
+			<?php
+			
+			}
+			
+			?>
 			</ul>
 			<div class="clearfix"></div>
 

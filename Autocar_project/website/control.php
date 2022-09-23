@@ -14,11 +14,12 @@ class control extends model
 		switch($path)
 		{
 			case '/index';
+			$fetcharr=$this->selectall('vehicale');
 			include_once('index.php');
 			break;
 			
-			case '/about';
-			include_once('about.php');
+			case '/categories';
+			include_once('categories.php');
 			break;
 			
 			case '/contact';
@@ -45,12 +46,13 @@ class control extends model
 			include_once('contact.php');
 			break;
 			
-			case '/gallery';
-			include_once('gallery.php');
+			case '/vehicales';
+			$fetcharr=$this->selectall('vehicale');
+			include_once('vehicales.php');
 			break;
 			
-			case '/services';
-			include_once('services.php');
+			case '/booking';
+			include_once('booking.php');
 			break;
 			
 			case '/myprofile';
