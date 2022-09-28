@@ -14,7 +14,7 @@ class control extends model
 		switch($path)
 		{
 			case '/index';
-			$fetcharr=$this->selectall('vehicale');
+			$fetcharr=$this->selectall('categories');
 			include_once('index.php');
 			break;
 			
@@ -49,6 +49,32 @@ class control extends model
 			case '/vehicales';
 			$fetcharr=$this->selectall('vehicale');
 			include_once('vehicales.php');
+			break;
+			
+			case '/vehicaleform';
+			if(isset($_REQUEST['submit']))
+			{
+					$name=$_REQUEST['name'];
+					$des=$_REQUEST['des'];
+					$mileage=$_REQUEST['mileage'];
+					$price=$_REQUEST['price'];
+					$img=$_FILES['img']['name'];
+					$path='img/vehi_img/'.$img;
+					$dup_file=$_FILES['img']['tmp_name'];
+					move_uploaded_file($dup_file,$path);		
+					
+					$arr=array("name"=>$name,"des"=>$des,"mileage"=>$mileage,"price"=>$price,"img"=>$img);
+					$res=$this->insert('vehicale',$arr);
+					if($res)
+					{
+						echo "<script> alert('Register successfully')</script>";
+					}
+					else
+					{
+						echo "<script>Not successfully</script>";
+					}
+			}
+			include_once('vehicaleform.php');
 			break;
 			
 			case '/booking';

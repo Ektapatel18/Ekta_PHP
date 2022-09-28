@@ -27,6 +27,7 @@ include_once('header.php');
 						<th>Cli_id</th>
 						<th>Name</th>
 						<th>Description</th>
+						<th>Mileage
 						<th>Price</th>
 						<th>Image</th>
 						<th>Edit</th>
@@ -43,8 +44,9 @@ include_once('header.php');
 						<td><?php echo $v->cli_id;?></td>
 						<td><?php echo $v->name;?></td>
 						<td><?php echo $v->des;?></td>
+						<td><?php echo $v->mileage;?></td>
 						<td><?php echo $v->price;?></td>
-						<td><img src="img/<?php echo $v->img;?>" width="80px" height="80px"/></td>
+						<td><img src="../website/img/vehi_img/<?php echo $v->img;?>" width="80px" height="80px"/></td>
 						<td><a href="editvehicale?edit_vehi_id=<?php echo $v->vehi_id;?>" class="btn btn-primary">Edit</a></td>
 						<td><a href="delete?del_vehi_id=<?php echo $v->vehi_id;?>" class="btn btn-danger">Delete</a></td>
 					  </tr>

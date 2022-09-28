@@ -67,6 +67,7 @@ include_once ('header.php');
 						<li><a href="categories">Categories</a></li>
 						<li><a href="booking">Booking</a></li>
 						<li><a href="vehicales">Available Vehicales</a></li>
+						<li><a href="vehicaleform">Vehicales Form</a></li>
 						<li><a href="contact">Contact Us</a></li>
 					</ul>
 				</div>
@@ -209,9 +210,9 @@ include_once ('header.php');
 				?>
 				<li>
 					<div class="biseller-column">
-						<a href="#"><img src="../employee/img/cate_img/<?php echo $data->img;?>" height="200px" width="200px" alt=""/></a>
-						<h4><?php echo $data->name;?></h4>
-						<h5><?php echo $data->des;?></h5>
+						<a href="#"><img src="../employee/img/cate_img/<?php echo $data->cate_img;?>" height="200px" width="200px" alt=""/></a>
+						<h4><?php echo $data->cate_name;?></h4>
+						<h5><?php echo $data->cate_desc;?></h5>
 						<a class="more hvr-bounce-to-bottom" href="gallery">Read More..</a>
 					</div>
 				</li>

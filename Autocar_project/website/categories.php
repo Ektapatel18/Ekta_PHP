@@ -60,6 +60,7 @@ include_once ('header.php');
 						<li class="active"><a href="categories">Categories</a></li>
 						<li><a href="booking">Booking</a></li>
 						<li><a href="vehicales">Available Vehicales</a></li>
+						<li><a href="vehicaleform">Vehicales Form</a></li>						
 						<li><a href="contact">Contact Us</a></li>
 					</ul>
 				</div>
@@ -94,10 +95,10 @@ include_once ('header.php');
 	<!---->
 	<div class="about">
 		<div class="container">
-			<h2>About Us</h2>
+			<h2>Categories</h2>
 			<ol class="breadcrumb">
 				<li><a href="index">Home</a></li>
-				<li class="active">About</li>
+				<li class="active">Categories</li>
 			</ol>
 			<div class="about-grids">
 				<div class="col-md-4 about-pic">

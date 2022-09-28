@@ -88,14 +88,19 @@ include_once('header.php');
             </div>
 			
 			<div class="col-md-12 form-group1 form-last">
+              <label class="control-label">Mileage</label>
+              <input type="text" name="mileage" value="<?php echo $fetch->mileage;?>" placeholder="Mileage" >
+            </div>
+			
+			<div class="col-md-12 form-group1 form-last">
               <label class="control-label">Price</label>
-              <input type="text" name="price" value="<?php echo $fetch->price;?>" placeholder="Mobile Number" >
+              <input type="text" name="price" value="<?php echo $fetch->price;?>" placeholder="Price" >
             </div>
 			
 			<div class="col-md-12 form-group1 form-last">
               <label class="control-label">Image</label>
-              <input type="file" name="img" value="<?php echo $fetch->img;?>" placeholder="Mobile Number" >
-			  <img src="img/<?php echo $fetch->img;?>" height="80" width="80">
+              <input type="file" name="img" value="<?php echo $fetch->img;?>" placeholder="Image" >
+			  <img src="../website/img/vehi_img/<?php echo $fetch->img;?>" height="80" width="80">
             </div>
 			
             <div class="col-md-12 form-group">

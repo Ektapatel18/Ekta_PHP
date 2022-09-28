@@ -248,9 +248,14 @@ class control extends model
 			{
 				$vehi_id=$_REQUEST['del_vehi_id'];
 				$where=array("vehi_id"=>$vehi_id);
+				$run=$this->select_where('vehicale',$where);
+				$fetch=$run->fetch_object();
+				$img=$fetch->img;
+				
 				$res=$this->delete_where('vehicale',$where);
 				if($res)
 				{
+					unlink('../website/img/vehi_img/'.$img);
 					 echo "<script> alert('Delete successfully')
 					 window.location='manage_vehicale';</script>";
 				}
@@ -259,9 +264,13 @@ class control extends model
 			{
 				$cat_id=$_REQUEST['del_cat_id'];
 				$where=array("cat_id"=>$cat_id);
+				$run=$this->select_where('categories',$where);
+				$fetch=$run->fetch_object();
+				$cate_img=$fetch->cate_img;
 				$res=$this->delete_where('categories',$where);
 				if($res)
 				{
+					unlink('../website/img/cate_img/'.$cate_img);
 					 echo "<script> alert('Delete successfully')
 					 window.location='manage_categories';</script>";
 				}
@@ -570,21 +579,23 @@ class control extends model
 					$vehi_id=$_REQUEST['vehi_id'];
 					$cli_id=$_REQUEST['cli_id'];
 					$name=$_REQUEST['name'];
+					$des=$_REQUEST['des'];
+					$mileage=$_REQUEST['mileage'];
 					$price=$_REQUEST['price'];
 					
 					if($_FILES['img']['size']>0)
 					{
 						$img=$_FILES['img']['name'];  
-						$path='img/'.$img;
+						$path='../website/img/vehi_img/'.$img;
 						$dup_file=$_FILES['img']['tmp_name'];
 						move_uploaded_file($dup_file,$path);
 				
 					
-					$arr=array("vehi_id"=>$vehi_id,"cli_id"=>$cli_id,"name"=>$name,"price"=>$price,"img"=>$img);
+					$arr=array("vehi_id"=>$vehi_id,"cli_id"=>$cli_id,"name"=>$name,"des"=>$des,"mileage"=>$mileage,"price"=>$price,"img"=>$img);
 					$res=$this->update('vehicale',$arr,$where);
 					if($res)
 					{
-						unlink('img/'.$old_file);
+						unlink('../website/img/vehi_img/'.$old_file);
 						echo "<script> 
 						alert('Update Success'); 
 						window.location='manage_vehicale';
@@ -593,7 +604,7 @@ class control extends model
 				}
 				else
 				{
-					$arr=array("vehi_id"=>$vehi_id,"cli_id"=>$cli_id,"name"=>$name,"price"=>$price,"img"=>$img);
+					$arr=array("vehi_id"=>$vehi_id,"cli_id"=>$cli_id,"name"=>$name,"des"=>$des,"mileage"=>$mileage,"price"=>$price,"img"=>$img);
 					$res=$this->update('vehicale',$arr,$where);
 					if($res)
 					{
@@ -628,7 +639,7 @@ class control extends model
 					if($_FILES['cate_img']['size']>0)
 					{
 						$cate_img=$_FILES['cate_img']['name'];  
-						$path='img/cate_img/'.$cate_img;
+						$path='../website/img/cate_img/'.$cate_img;
 						$dup_file=$_FILES['cate_img']['tmp_name'];
 						move_uploaded_file($dup_file,$path);
 				
@@ -637,7 +648,7 @@ class control extends model
 					$res=$this->update('categories',$arr,$where);
 					if($res)
 					{
-						unlink('img/cate_img/'.$old_file);
+						unlink('../website/img/cate_img/'.$old_file);
 						echo "<script> 
 						alert('Update Success'); 
 						window.location='manage_categories';
@@ -650,7 +661,7 @@ class control extends model
 					$res=$this->update('categories',$arr,$where);
 					if($res)
 					{
-						unlink('img/cate_img/'.$old_file);
+						unlink('../website/img/cate_img/'.$old_file);
 						echo "<script> 
 						alert('Update Success'); 
 						window.location='manage_categories';

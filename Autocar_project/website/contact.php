@@ -60,6 +60,7 @@ include_once('header.php');
 						<li><a href="categories">Categories</a></li>
 						<li><a href="booking">Booking</a></li>
 						<li><a href="vehicales">Available Vehicales</a></li>
+						<li><a href="vehicaleform">Vehicales Form</a></li>						
 						<li class="active"><a href="contact">Contact Us</a></li>
 					</ul>
 				</div>
