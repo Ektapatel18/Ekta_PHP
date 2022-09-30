@@ -83,6 +83,7 @@ include_once ('header.php');
 					<ul class="nav navbar-nav">
 						<li class="active"><a href="index">Home <span class="sr-only">(current)</span></a></li>
 						<li><a href="categories">Categories</a></li>
+						<li class="active"><a href="vehicales">Available Vehicales</a></li>
 						<li><a href="contact">Contact Us</a></li>
 					</ul>
 				</div>
@@ -111,8 +112,9 @@ include_once ('header.php');
 						?>
 						
 					<li>
-						<a href="single" data-largesrc="img/vehi_img/<?php echo $data->img;?>"  data-title="<?php echo $data->name;?>" data-description="<?php echo $data->des;?> <br> Mileage : <?php echo $data->mileage;?> <br> Price : <?php echo $data->price;?> ">
+						<a href="single" data-largesrc="img/vehi_img/<?php echo $data->img;?>"  data-title="<?php echo $data->name;?>" data-description="<?php echo $data->des;?> <br> Mileage : <?php echo $data->mileage;?> <br> Price : <?php echo $data->price;?><br> <button>Booking</button>">
 						<img class="img-responsive" src="img/vehi_img/<?php echo $data->img;?>" alt="img01"/>
+						
 						</a>
 					</li>
 					<?php

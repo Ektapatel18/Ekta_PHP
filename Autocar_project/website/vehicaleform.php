@@ -120,6 +120,7 @@ include_once ('header.php');
 					<ul class="nav navbar-nav">
 						<li class="active"><a href="index">Home <span class="sr-only">(current)</span></a></li>
 						<li><a href="categories">Categories</a></li>
+						<li><a href="vehicales">Available Vehicales</a></li>
 						<li><a href="contact">Contact Us</a></li>
 					</ul>
 				</div>

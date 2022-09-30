@@ -71,7 +71,7 @@ a#toTop {
 /*-- header_top --*/
 
 .banner {
-  background: url(../images/bg3.jpg) no-repeat 0px -120px;
+  background: url(../images/img2.jpg) no-repeat 0px -120px;
   background-size: cover;
   min-height: 800px;
 }
@@ -600,7 +600,7 @@ ul.navbar-nav li.active a {
 /*--slider2--*/
 
 .slider {
-  background: url(../images/audi.jpg) no-repeat 0px -156px;
+  background: url(../images/banner1.jpg) no-repeat 0px -156px;
   min-height: 380px;
   background-size: cover;
   padding: 7em 0;
@@ -1109,7 +1109,7 @@ a i.google:hover {
 /*--ABOUT--*/
 
 .banner2 {
-  background: url(../images/bg3.jpg) no-repeat 0px 0px;
+  background: url(../images/img2.jpg) no-repeat 0px 0px;
   background-size: cover;
   min-height: 300px;
 }
@@ -1832,7 +1832,7 @@ figure.effect-hera:hover p i:empty {
 
 @media (max-width: 1024px) {
   .banner {
-    background: url(../images/bg3.jpg) no-repeat -205px -133px;
+    background: url(../images/img2.jpg) no-repeat -205px -133px;
     min-height: 570px;
   }
   .banner-info h3 {
@@ -1906,7 +1906,7 @@ figure.effect-hera:hover p i:empty {
     font-size: 0.8em;
   }
   .banner2 {
-    background: url(../images/bg3.jpg) no-repeat 0px 0px;
+    background: url(../images/img2.jpg) no-repeat 0px 0px;
     min-height: 240px;
     padding-bottom: 0;
   }
@@ -2464,7 +2464,7 @@ figure.effect-hera:hover p i:empty {
   .slider {
     min-height: 123px;
     padding: 2em 0;
-    background: url(../images/audi.jpg) no-repeat 0px -26px;
+    background: url(../images/banner1.jpg) no-repeat 0px -26px;
   }
   #slider2 li p {
     font-size: 1em;
@@ -2535,7 +2535,7 @@ figure.effect-hera:hover p i:empty {
     line-height: 1em;
   }
   .banner {
-    background: url(../images/bg3.jpg) no-repeat 0px 0px;
+    background: url(../images/img2.jpg) no-repeat 0px 0px;
     min-height: 452px;
     background-size: cover;
   }
@@ -2804,7 +2804,7 @@ figure.effect-hera:hover p i:empty {
     font-size: 0.8em;
   }
   .banner {
-    background: url(../images/bg3.jpg) no-repeat -144px 0px;
+    background: url(../images/img2.jpg) no-repeat ;
     min-height: 344px;
     background-size: cover;
   }

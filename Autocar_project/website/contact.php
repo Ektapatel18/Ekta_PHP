@@ -83,6 +83,7 @@ include_once('header.php');
 					<ul class="nav navbar-nav">
 						<li ><a href="index">Home <span class="sr-only">(current)</span></a></li>
 						<li><a href="categories">Categories</a></li>
+						<li><a href="vehicales">Available Vehicales</a></li>
 						<li class="active"><a href="contact">Contact Us</a></li>
 					</ul>
 				</div>
@@ -118,7 +119,7 @@ include_once('header.php');
 						</div>
 					</div>
 					<div class="col-md-9 contact-left">
-						<form>
+						<form action="" method="post" enctype="multipart/form-data">
 							<input type="text" name="name" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" />
 							<input type="text" name="email_id" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" />
 							<input type="text" name="contact_no" value="Phone" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Phone';}" />

@@ -173,8 +173,10 @@ class control extends model
 				$user_name=$_REQUEST['user_name'];
 				$password=$_REQUEST['pass'];
 				$pass=md5($password);
+				$adharcard_no=$_REQUEST['adharcard_no'];
+				$driving_licence=$_REQUEST['driving_licence'];
 
-				$arr=array("name"=>$name,"addres"=>$addres,"contact_no"=>$contact_no,"email_id"=>$email_id,"user_name"=>$user_name,"pass"=>$pass);
+				$arr=array("name"=>$name,"addres"=>$addres,"contact_no"=>$contact_no,"email_id"=>$email_id,"user_name"=>$user_name,"pass"=>$pass,"adharcard_no"=>$adharcard_no,"driving_licence"=>$driving_licence);
 				
 				$res=$this->insert('customer',$arr);
 				if($res)
