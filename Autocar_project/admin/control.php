@@ -147,12 +147,12 @@ class control extends model
 			include_once('manage_user.php');
 			break;
 			
-			case '/manage_vehicale';
+			case '/manage_vehicale':
 			$manage_vehicale_arr=$this->selectall('vehicale');
 			include_once('manage_vehicale.php');
 			break;
 				
-			case '/profile';
+			case '/profile':
 			$where=array("username"=>$_SESSION['admin']);
 			$run=$this->select_where('admin',$where);
 			$fetch=$run->fetch_object();
@@ -678,9 +678,10 @@ class control extends model
 			case '/admin_logout':
 			unset($_SESSION['admin']);
 			echo "<script>
-			alert('Logout Success')
-			window.location='index';
-			</script>";
+				alert('Logout Success');
+				window.location='index';
+				</script>";
+			break;
 			
 			default:
 			include_once('404.php');

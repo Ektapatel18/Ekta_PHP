@@ -1,5 +1,4 @@
 <?php
-
 if(isset($_SESSION['admin']))
 {
 	
@@ -35,25 +34,12 @@ include_once('header.php');
 			<div class="col-md-8 profile-text">
 				<h6>ID :<?php echo $fetch->admin_id;?></h6>
 				<table>
-				<tr><td>UserName </td>  
+				<tr>
+				<td>UserName </td>  
 				<td>:</td>  
-				<td><?php echo $fetch->username;?></td></tr>
+				<td><?php echo $fetch->username;?></td>
+				</tr>
 				
-				<tr>
-				<td>Email</td>
-				<td> :</td>
-				<td><a href="info@gmail.com">info@lorem.com</a></td>
-				</tr>
-				<tr>
-				<td>Skills</td>
-				<td> :</td>
-				<td> HTML, CSS,Jqury, Bootstrap</td>
-				</tr>
-				<tr>
-				<td>Country </td>
-				<td>:</td>
-				<td> United Arab Emirates</td>
-				</tr>
 				</table>
 			</div>
 			<div class="clearfix"></div>

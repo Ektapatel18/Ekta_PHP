@@ -469,9 +469,9 @@ class control extends model
 			case '/employee_logout':
 			unset($_SESSION['employee']);
 			echo "<script>
-			alert('Logout Success');
-			window.location='index';
-			</script>";
+				alert('Logout Success');
+				window.location='index';
+				</script>";
 			break;
 			
 			default:

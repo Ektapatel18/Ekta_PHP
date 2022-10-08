@@ -205,7 +205,7 @@ include_once ('header.php');
 				?>
 				<li>
 					<div class="biseller-column">
-						<a href="#"><img src="../employee/img/cate_img/<?php echo $data->cate_img;?>" height="200px" width="200px" alt=""/></a>
+						<a href="#"><img src="../employee/img/cate_img/<?php echo $data->cate_img;?>" height="100px" width="100px" alt=""/></a>
 						<h4><?php echo $data->cate_name;?></h4>
 						<h5><?php echo $data->cate_desc;?></h5>
 						<a class="more hvr-bounce-to-bottom" href="vehicales">Read More..</a>

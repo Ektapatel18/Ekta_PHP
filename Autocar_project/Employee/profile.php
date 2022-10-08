@@ -35,13 +35,15 @@ include_once('header.php');
 			<div class="col-md-8 profile-text">
 				<h6>ID :<?php echo $fetch->emp_id;?></h6>
 				<table>
-				<tr><td>Name</td>  
+				<tr>
+				<td>Name</td>  
 				<td>:</td>  
-				<td><?php echo $fetch->name;?></td></tr>
+				<td><?php echo $fetch->name;?></td>
+				</tr>
 				
 				<tr>
 				<td>Address</td>
-				<td> :</td>
+				<td>:</td>
 				<td><?php echo $fetch->addres;?></td>
 				</tr>
 				<tr>
